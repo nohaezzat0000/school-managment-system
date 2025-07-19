@@ -1,0 +1,32 @@
+<p-toast></p-toast>
+
+<div class="flex justify-content-center mt-5">
+  <p-card class="w-full md:w-6 p-4 shadow-3">
+    <div class="p-fluid">
+      <div class="field mb-4">
+        <label for="name" class="block mb-2">Name</label>
+        <input id="name" type="text" pInputText [(ngModel)]="name" class="w-full" />
+      </div>
+
+      <div class="field mb-4">
+        <label for="email" class="block mb-2">Email</label>
+        <input id="email" type="text" pInputText [(ngModel)]="email" class="w-full" />
+      </div>
+
+      <div class="field mb-4">
+        <label for="message" class="block mb-3">Message</label>
+        <textarea id="message" rows="5" pInputTextarea [(ngModel)]="message" class="w-full"></textarea>
+      </div>
+
+      <div class="text-center">
+        <button
+          pButton
+          type="button"
+          label="Send Message"
+          (click)="sendMessage()"
+          class="p-button-success"
+        ></button>
+      </div>
+    </div>
+  </p-card>
+</div>
