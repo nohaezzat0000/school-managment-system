@@ -1,5 +1,5 @@
 {
-  "name": "school-managment-system",
+  "name": "angular2",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -20,12 +20,16 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "^20.1.0",
-    "@angular/compiler": "^20.1.0",
-    "@angular/core": "^20.1.0",
-    "@angular/forms": "^20.1.0",
-    "@angular/platform-browser": "^20.1.0",
-    "@angular/router": "^20.1.0",
+    "@angular/common": "^20.1.1",
+    "@angular/compiler": "^20.1.1",
+    "@angular/core": "^20.1.1",
+    "@angular/forms": "^20.1.1",
+    "@angular/platform-browser": "^20.1.1",
+    "@angular/router": "^20.1.1",
+    "@primeuix/themes": "^1.0.0",
+    "primeflex": "^4.0.0",
+    "primeicons": "^7.0.0",
+    "primeng": "^20.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
@@ -33,7 +37,7 @@
   "devDependencies": {
     "@angular/build": "^20.1.1",
     "@angular/cli": "^20.1.1",
-    "@angular/compiler-cli": "^20.1.0",
+    "@angular/compiler-cli": "^20.1.1",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.8.0",
     "karma": "~6.4.0",
