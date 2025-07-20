@@ -1,6 +1,17 @@
 <p-menubar [model]="items">
   <div class="flex align-items-center">
     <i class="pi pi-shopping-bag text-xl mr-2"></i>
-    <span class="font-bold text-xl"> Mini E-Shop</span>
+    <span class="font-bold text-xl">Mini E-Shop</span>
   </div>
+  
+  <ng-template pTemplate="end">
+    <button 
+      pButton 
+      type="button" 
+      [label]="currentLang === 'en' ? 'العربية' : 'English'"
+      icon="pi pi-globe"
+      class="p-button-text"
+      (click)="toggleLanguage()">
+    </button>
+  </ng-template>
 </p-menubar>

@@ -1,11 +1,17 @@
 <div class="home-container p-4">
   <!-- Welcome Card -->
-  <p-card header="Welcome to Mini E-Shop" class="mb-4 text-center">
-    <ng-template pTemplate="content">
-      <p>Browse our wide selection of products and find the best deals just for you!</p>
-      <button pButton type="button" label="Shop Now" class="mt-3" routerLink="/products"></button>
-    </ng-template>
-  </p-card>
+<p-card [header]="'home.welcome' | translate" class="mb-4 text-center">
+  <ng-template pTemplate="content">
+    <p>{{ 'home.description' | translate }}</p>
+    <button
+      pButton
+      type="button"
+      [label]="'home.button' | translate"
+      class="mt-3"
+      routerLink="/products"
+    ></button>
+  </ng-template>
+</p-card>
 
   <!-- Divider -->
   <p-divider align="center" class="my-4"></p-divider>

@@ -1,0 +1,14 @@
+{
+  "home": {
+    "welcome": "Welcome to Mini E-Shop",
+    "description": "Browse our wide selection of products and find the best deals just for you!",
+    "button": "Shop Now"
+  },
+  
+  "navbar": {
+  "home": "Home",
+  "products": "Products",
+  "contact": "Contact Us",
+  "cart": "Cart"
+}
+}
