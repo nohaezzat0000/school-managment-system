@@ -1,0 +1,87 @@
+
+.p-menubar {
+  width: 100% !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 1rem 3rem;
+  z-index: 1000;
+  font-size: 1.125rem;
+}
+
+.p-menubar .p-menubar-start,
+.p-menubar .p-menubar-end {
+  margin: 0;
+  padding: 0;
+}
+
+.p-menubar .logo span.font-bold {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a202c;
+  line-height: 1.2;
+  font-family: 'Inter', sans-serif;
+}
+
+.p-menubar .logo span.font-light {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #718096;
+  line-height: 1.2;
+  font-family: 'Inter', sans-serif;
+  margin-top: 0;
+}
+
+/* icon */
+.p-menubar i.pi-building-columns {
+  font-size: 2.25rem;
+  color: #00070c;
+  margin-right: 0.75rem;
+}
+
+/*  Sign In */
+.custom-signin {
+  background-color: white !important;
+  color: black !important;
+  border: none !important;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 0 1.25rem !important;
+  height: 3rem !important;
+  line-height: 3rem !important;
+  font-size: 1rem !important;
+  font-weight: 600;
+}
+
+.custom-signin:hover {
+  background-color: #f0f0f0 !important;
+  color: #333 !important;
+}
+
+/*  Get Started */
+.custom-getstarted {
+  background-color: black !important;
+  border-color: black !important;
+  color: white !important;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 0.75rem 2rem !important;
+  height: 3rem !important;
+  line-height: 3rem !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  border-radius: 0.5rem !important;
+}
+
+.custom-getstarted:hover {
+  background-color: #333 !important;
+  color: #eee !important;
+}
+
+body, html {
+  padding-top: 80px;
+  margin: 0;
+}
+

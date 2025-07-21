@@ -1,17 +1,22 @@
-<p-menubar [model]="items">
-  <div class="flex align-items-center">
-    <i class="pi pi-shopping-bag text-xl mr-2"></i>
-    <span class="font-bold text-xl">Mini E-Shop</span>
-  </div>
-  
+<p-menubar [model]="[]">
+  <!-- Logo on the left -->
+  <ng-template pTemplate="start">
+    <div class="flex align-items-center">
+      <i class="pi pi-building-columns text-xl mr-2"></i>
+      <div class="logo" style="display: flex; flex-direction: column;">
+        <span class="font-bold text-xl">NTG-ATS</span>
+        <span class="font-light text-sm">School management System</span>
+      </div>
+    </div>
+  </ng-template>
+
+  <!-- Buttons on the right -->
   <ng-template pTemplate="end">
-    <button 
-      pButton 
-      type="button" 
-      [label]="currentLang === 'en' ? 'العربية' : 'English'"
-      icon="pi pi-globe"
-      class="p-button-text"
-      (click)="toggleLanguage()">
-    </button>
+    <div class="flex gap-2">
+        <button pButton label="Sign In" class="p-button-text custom-signin"></button>
+        <button pButton label="Get Started" class="custom-getstarted"></button>
+
+    </div>
   </ng-template>
 </p-menubar>
+
