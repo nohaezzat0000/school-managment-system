@@ -23,7 +23,7 @@ export class AdminDashboard implements OnInit{
         icon: 'pi pi-users',
         expanded: false,
         items: [
-          { label: 'Students', icon: 'pi pi-user-plus' },
+          { label: 'Students', icon: 'pi pi-user-plus', routerLink: 'students' },
           { label: 'Teachers', icon: 'pi pi-cog' },
           { label: 'Management', icon: 'pi pi-cog', routerLink:'management' }
         ]
