@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MessageService } from 'primeng/api';
 import {Toast} from 'primeng/toast';
 import { Router } from '@angular/router';
+import {TranslatePipe} from '@ngx-translate/core';
 @Component({
   selector: 'app-auth',
   providers: [MessageService],
@@ -11,7 +12,8 @@ import { Router } from '@angular/router';
   imports: [
     ReactiveFormsModule,
     CommonModule,
-    Toast
+    Toast,
+    TranslatePipe
   ],
   templateUrl: './auth.html',
   styleUrl: './auth.css'

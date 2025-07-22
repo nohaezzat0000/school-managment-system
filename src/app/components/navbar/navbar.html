@@ -13,6 +13,9 @@
   <!-- Buttons on the right -->
   <ng-template pTemplate="end">
     <div class="flex gap-2">
+      <button class="lang-icon-btn" (click)="toggleLang()" title="Change Language">
+        🌐 {{ currentLang === 'ar' ? 'AR' : 'EN' }}
+      </button>
         <button pButton label="Sign In" class="p-button-text custom-signin" routerLink="/auth"
         ></button>
         <button pButton label="Get Started" class="custom-getstarted" routerLink="/auth"

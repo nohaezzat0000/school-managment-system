@@ -16,23 +16,29 @@ import {RouterLink} from '@angular/router';
 })
 export class Navbar implements OnInit {
   items: MenuItem[] = [];
-  currentLang = 'en';
+  currentLang: string = 'en';
 
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService) {
+    this.currentLang = this.translate.currentLang || 'en';
+    this.translate.use(this.currentLang);
+    this.setDirection(this.currentLang);
+  }
 
   ngOnInit() {
-    // Set the default language
+
+  }
+
+
+  toggleLang() {
+    this.currentLang = this.currentLang === 'en' ? 'ar' : 'en';
     this.translate.use(this.currentLang);
-    this.setDocumentDirection();
+    this.setDirection(this.currentLang);
+  }
 
-    // Load the translated labels for menu items
-    this.updateMenuItems();
-
-    // Update menu items when language changes
-    this.translate.onLangChange.subscribe(() => {
-      this.updateMenuItems();
-      this.setDocumentDirection();
-    });
+  private setDirection(lang: string) {
+    const dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.dir = dir;
+    document.documentElement.lang = lang;
   }
 
   updateMenuItems() {
@@ -51,13 +57,5 @@ export class Navbar implements OnInit {
     });
   }
 
-  toggleLanguage() {
-    this.currentLang = this.currentLang === 'en' ? 'ar' : 'en';
-    this.translate.use(this.currentLang);
-    this.setDocumentDirection();
-  }
 
-  setDocumentDirection() {
-    document.documentElement.dir = this.currentLang === 'ar' ? 'rtl' : 'ltr';
-  }
 }
