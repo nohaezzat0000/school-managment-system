@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { TableModule } from 'primeng/table';
-import { ManagementService, User } from '../../services/management';
+import { ManagementService, User } from '../../../../services/management';
 @Component({
   selector: 'app-management',
   imports: [CommonModule, TableModule],
