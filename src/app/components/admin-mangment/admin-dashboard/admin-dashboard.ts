@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { ButtonModule } from 'primeng/button';
 import { MenuItem } from 'primeng/api';
-import {Management} from '../admin-mangment/users/management/management';
+import {Management} from '../users/management/management';
 import { RouterOutlet } from '@angular/router';
 
 @Component({

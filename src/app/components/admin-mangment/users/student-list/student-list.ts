@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {StudentService, Student} from '../../../services/student-service';
+import {StudentService, Student} from '../../../../services/student-service';
 import {TableModule} from 'primeng/table';
 
 @Component({
