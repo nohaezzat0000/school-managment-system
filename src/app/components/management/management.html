@@ -1,8 +1,4 @@
-<br>
-<br>
-<br>
-
-  <p-table #table [value]="users" styleClass="w-full"
+<p-table #table [value]="users" styleClass="w-full"
   [stripedRows]="true" 
   [rowHover]="true"
   selectionMode="single"
@@ -11,14 +7,31 @@
   [paginator]="true"
   [rows]="5"
   [rowsPerPageOptions]="[5, 10, 20]"
+  [globalFilterFields]="['id', 'name', 'job']"
   >
+    <ng-template pTemplate="caption">
+      <div class="flex">
+        <p-iconfield iconPosition="left" class="ml-auto">
+          <p-inputicon>
+            <i class="pi pi-search"></i>
+          </p-inputicon>
+          <input pInputText type="text" (input)="table.filterGlobal($event.target.value, 'contains')" placeholder="Search keyword" />
+        </p-iconfield>
+      </div>
+    </ng-template>
     <ng-template pTemplate="header">
       <tr>
         <th>ID</th>
-        <th>Name
-            <input pInputText type="text" (input)="table.filter($event.target.value, 'name', 'contains')" placeholder="Search name" class="p-inputtext-sm p-column-filter" />
-        </th>
+        <th>Name</th>
         <th>Role</th>
+      </tr>
+      <tr>
+        <th>
+          <p-columnFilter type="text" field="id" placeholder="Search ID" ariaLabel="Filter ID"></p-columnFilter>
+        </th>
+        <th>
+          <p-columnFilter type="text" field="name" placeholder="Search name" ariaLabel="Filter Name"></p-columnFilter>
+        </th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-user>
@@ -28,5 +41,9 @@
         <td>{{ user.job }}</td>
       </tr>
     </ng-template>
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="3">No users found.</td>
+      </tr>
+    </ng-template>
   </p-table>
-

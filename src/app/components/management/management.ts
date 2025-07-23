@@ -1,10 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { TableModule } from 'primeng/table';
+import { Table, TableModule } from 'primeng/table';
 import { ManagementService, User } from '../../services/management';
+import { InputTextModule } from 'primeng/inputtext';
+import { IconFieldModule } from 'primeng/iconfield';
+import { InputIconModule } from 'primeng/inputicon';
+
 @Component({
   selector: 'app-management',
-  imports: [CommonModule, TableModule],
+  imports: [CommonModule, TableModule, InputTextModule, IconFieldModule, InputIconModule],
   templateUrl: './management.html',
   styleUrl: './management.css'
 })
@@ -20,5 +24,8 @@ export class Management implements OnInit{
     this.mangementService.getUsers().subscribe(data => {
       this.users = data;
     })
+  }
+  clear(table: Table){
+    table.clear();
   }
 }
