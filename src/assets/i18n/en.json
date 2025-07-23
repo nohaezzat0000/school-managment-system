@@ -1,14 +1,40 @@
 {
-  "home": {
-    "welcome": "Welcome to Mini E-Shop",
-    "description": "Browse our wide selection of products and find the best deals just for you!",
-    "button": "Shop Now"
-  },
-  
-  "navbar": {
-  "home": "Home",
-  "products": "Products",
-  "contact": "Contact Us",
-  "cart": "Cart"
+  "WELCOME_TITLE": "Welcome to NTG-ATS",
+  "WELCOME_MESSAGE": "Streamlined student application tracking system for modern educational institutions",
+  "START_APPLICATION": "Start Your Application",
+  "LANGUAGE": "English",
+  "CARD_1_TITLE": "Easy Application",
+  "CARD_1_DESC": "Simple and intuitive application process for students and parents",
+  "CARD_2_TITLE": "Document Management",
+  "CARD_2_DESC": "Secure upload and verification of required documents",
+  "CARD_3_TITLE": "Real-time Tracking",
+  "CARD_3_DESC": "Track your application status with instant updates",
+  "CARD_4_TITLE": "Bilingual Support",
+  "CARD_4_DESC": "Full support for English and Arabic languages",
+  "CTA_TITLE": "Ready to Get Started?",
+  "CTA_SUBTITLE": "Join thousands of families who have simplified their school application process",
+  "CREATE_ACCOUNT": "Create Your Account",
+  "FOOTER": "© 2024 NTG-ATS School Management System. All rights reserved.",
+  "WELCOME_TO": "Welcome to NTG-ATS",
+  "SYSTEM_NAME": "School Management System",
+
+  "SIGN_IN": "Sign In",
+  "SIGN_IN_TITLE": "Sign In to your account",
+  "SIGN_UP": "Sign Up",
+  "SIGN_UP_TITLE": "Create a new account",
+
+  "EMAIL": "Email",
+  "PASSWORD": "Password",
+  "FULL_NAME": "Full Name",
+
+  "ENTER_EMAIL": "Enter your email",
+  "ENTER_PASSWORD": "Enter your password",
+  "ENTER_NAME": "Enter your full name",
+
+  "SUBMIT_SIGNIN": "Sign In",
+  "SUBMIT_SIGNUP": "Sign Up",
+
+  "REQUIRED_FIELD": "Please fill out this field.",
+  "INVALID_EMAIL": "Please enter a valid email."
 }
-}
+
