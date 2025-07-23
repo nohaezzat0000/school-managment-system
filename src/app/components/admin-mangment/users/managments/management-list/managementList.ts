@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Table, TableModule } from 'primeng/table';
-import { ManagementService, User } from '../../services/management';
+import { ManagementService, User } from '../../../../../services/management';
 import { InputTextModule } from 'primeng/inputtext';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
@@ -9,10 +9,10 @@ import { InputIconModule } from 'primeng/inputicon';
 @Component({
   selector: 'app-management',
   imports: [CommonModule, TableModule, InputTextModule, IconFieldModule, InputIconModule],
-  templateUrl: './management.html',
-  styleUrl: './management.css'
+  templateUrl: './managementList.html',
+  styleUrl: './managementList.css'
 })
-export class Management implements OnInit{
+export class ManagementList implements OnInit{
   users: User[] = [];
   selectedUser: User | null = null;
 

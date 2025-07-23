@@ -2,12 +2,13 @@ import {Component, OnInit} from '@angular/core';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { ButtonModule } from 'primeng/button';
 import { MenuItem } from 'primeng/api';
-import {Management} from '../../management/management';
-import { RouterOutlet } from '@angular/router';
+import {ManagementList} from '../users/managments/management-list/managementList';
+import {RouterOutlet} from '@angular/router';
+
 
 @Component({
   selector: 'app-admin-dashboard',
-  imports: [PanelMenuModule, ButtonModule, Management, RouterOutlet],
+  imports: [PanelMenuModule, ButtonModule, ManagementList, RouterOutlet],
   standalone:true,
   templateUrl: './admin-dashboard.html',
   styleUrl: './admin-dashboard.css'
@@ -25,7 +26,7 @@ export class AdminDashboard implements OnInit{
         items: [
           { label: 'Students', icon: 'pi pi-user-plus', routerLink: 'students' },
           { label: 'Teachers', icon: 'pi pi-cog' },
-          { label: 'Management', icon: 'pi pi-cog', routerLink:'management' }
+          { label: 'ManagementList', icon: 'pi pi-cog', routerLink:'management' }
         ]
       },
       {
