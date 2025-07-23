@@ -1,16 +1,16 @@
 import {Component, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {StudentService, Student} from '../../../../../services/student-service';
+import {StudentService, Student} from '../../../../../../services/student-service';
 import {TableModule} from 'primeng/table';
 
 @Component({
   selector: 'app-student-list',
   standalone: true,
   imports: [CommonModule, TableModule],
-  templateUrl: './student-list.html',
-  styleUrl: './student-list.css'
+  templateUrl: './teachers-list.html',
+  styleUrl: './teachers-list.css'
 })
-export class StudentList implements OnInit {
+export class TeachersList implements OnInit {
 
   students: Student[] = [];
 

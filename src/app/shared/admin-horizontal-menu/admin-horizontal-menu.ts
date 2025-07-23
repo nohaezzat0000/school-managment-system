@@ -1,19 +1,17 @@
-import {Component, OnInit} from '@angular/core';
-import { PanelMenuModule } from 'primeng/panelmenu';
-import { ButtonModule } from 'primeng/button';
-import { MenuItem } from 'primeng/api';
-import {ManagementList} from './users/managments/management-list/managementList';
-import {RouterOutlet} from '@angular/router';
-
+import { Component } from '@angular/core';
+import {PanelMenu} from 'primeng/panelmenu';
+import {MenuItem} from 'primeng/api';
 
 @Component({
-  selector: 'app-admin-dashboard',
-  imports: [PanelMenuModule, ButtonModule, ManagementList, RouterOutlet],
-  standalone:true,
-  templateUrl: './admin-dashboard.html',
-  styleUrl: './admin-dashboard.css'
+  selector: 'app-admin-horizontal-menu',
+  imports: [
+    PanelMenu
+  ],
+  templateUrl: './admin-horizontal-menu.html',
+  styleUrl: './admin-horizontal-menu.css'
 })
-export class AdminDashboard implements OnInit{
+export class AdminHorizontalMenu {
+
 
   items: MenuItem[] = [];
 
@@ -49,6 +47,4 @@ export class AdminDashboard implements OnInit{
       }
     ];
   }
-
-
 }
