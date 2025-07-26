@@ -29,7 +29,6 @@ export const routes: Routes = [
     path: 'admin',
     component: AdminLayout,
     children: [
-      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: AdminDashboard },
       {
           path: 'users',

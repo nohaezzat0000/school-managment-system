@@ -22,9 +22,9 @@ export class AdminHorizontalMenu {
         icon: 'pi pi-users',
         expanded: false,
         items: [
-          { label: 'Students', icon: 'pi pi-user-plus', routerLink: 'students' },
-          { label: 'Teachers', icon: 'pi pi-cog' },
-          { label: 'ManagementList', icon: 'pi pi-cog', routerLink:'management' }
+          { label: 'Students', icon: 'pi pi-user-plus', routerLink: '/admin/users/StudentList' },
+          { label: 'Teachers', icon: 'pi pi-cog',routerLink: '/admin/users/TeachersList' },
+          { label: 'ManagementList', icon: 'pi pi-cog', routerLink:'/admin/users/ManagementList' }
         ]
       },
       {
