@@ -4,7 +4,7 @@ import {Auth} from './components/auth/auth';
 import {PublicLayout} from './layouts/public-layout/public-layout';
 import {AdminLayout} from './layouts/admin-layout/admin-layout';
 import {AdminDashboard} from './components/admin-mangment/admin-dashboard/admin-dashboard';
-
+import { RoleGuard } from './core/guards/role-guard';
 // export const routes: Routes = [
 //     { path: '', component: Home},
 //     {path: 'auth' , component: Auth},
@@ -28,6 +28,8 @@ export const routes: Routes = [
   {
     path: 'admin',
     component: AdminLayout,
+    canActivate: [RoleGuard],
+    data: {roles: ['Admin']},
     children: [
       { path: 'dashboard', component: AdminDashboard },
       {
