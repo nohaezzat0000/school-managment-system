@@ -24,10 +24,21 @@
   "SIGN_UP_TITLE": "Create a new account",
 
   "EMAIL": "Email",
+  "USERNAME": "Username",
+  "FIRST_NAME": "First Name",
+  "LAST_NAME": "Last Name",
+  "DATE_OF_BIRTH": "Date of Birth",
+  "PHONE_NUMBER": "Phone Number",
   "PASSWORD": "Password",
+  "CONFIRM_PASSWORD": "Confirm Password",
   "FULL_NAME": "Full Name",
 
+  "ENTER_FIRST_NAME": "Enter First Name",
+  "ENTER_LAST_NAME": "Enter Last Name",
+  "SELECT_DOB": "Select Date",
+  "ENTER_PHONE": "Enter Phone Number",
   "ENTER_EMAIL": "Enter your email",
+  "ENTER_USERNAME": "Enter your username",
   "ENTER_PASSWORD": "Enter your password",
   "ENTER_NAME": "Enter your full name",
 
@@ -35,6 +46,13 @@
   "SUBMIT_SIGNUP": "Sign Up",
 
   "REQUIRED_FIELD": "Please fill out this field.",
-  "INVALID_EMAIL": "Please enter a valid email."
+  "INVALID_EMAIL": "Please enter a valid email.",
+  "INVALID_DATE": "Invalid Date",
+  "PHONE_NUMBERS_ONLY": "Please enter a valid number",
+  "PASSWORD_TOO_SHORT": "Password is too short",
+  "PASSWORDS_DONT_MATCH": "Passwords do not match",
+
+  "FORGOT_PASSWORD": "Forgot Password",
+  "ACTIVATE_ACCOUNT": "Activate your account"
 }
 

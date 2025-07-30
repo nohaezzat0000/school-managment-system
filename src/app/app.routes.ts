@@ -5,7 +5,6 @@ import {PublicLayout} from './layouts/public-layout/public-layout';
 import {AdminLayout} from './layouts/admin-layout/admin-layout';
 import {AdminDashboard} from './components/admin-mangment/admin-dashboard/admin-dashboard';
 import { RoleGuard } from './appCommon/guards/role-guard';
-//import { UserProfile } from './components/user-profile/user-profile';
 // export const routes: Routes = [
 //     { path: '', component: Home},
 //     {path: 'auth' , component: Auth},
@@ -41,7 +40,6 @@ export const routes: Routes = [
       // more admin routes
     ]
   },
-  //{path: 'app-user-profile', component: UserProfile},
   {
     path: '**',
     redirectTo: ''

@@ -23,10 +23,21 @@
   "SIGN_UP": "إنشاء حساب",
   "SIGN_UP_TITLE": "إنشاء حساب جديد",
 
+  "USERNAME": "أسم المستخدم",
+  "FIRST_NAME": "الإسم الأول",
+  "LAST_NAME": "الإسم الأخير",
+  "DATE_OF_BIRTH": "تاريخ الميلاد",
   "EMAIL": "البريد الإلكتروني",
+  "PHONE_NUMBER": "رقم الجوال",
   "PASSWORD": "كلمة المرور",
+  "CONFIRM_PASSWORD": "تأكيد كلمة المرور",
   "FULL_NAME": "الاسم الكامل",
 
+  "ENTER_FIRST_NAME": "أدخل الإسم الأول",
+  "ENTER_LAST_NAME": "أدخل الإسم الأخير",
+  "ENTER_USERNAME": "أدخل أسم المستخدم",
+  "SELECT_DOB": "أختر التاريخ",
+  "ENTER_PHONE": "أدخل رقم الجوال",
   "ENTER_EMAIL": "أدخل بريدك الإلكتروني",
   "ENTER_PASSWORD": "أدخل كلمة المرور",
   "ENTER_NAME": "أدخل اسمك الكامل",
@@ -35,5 +46,12 @@
   "SUBMIT_SIGNUP": "إنشاء الحساب",
 
   "REQUIRED_FIELD": "يرجى تعبئة هذا الحقل.",
-  "INVALID_EMAIL": "يرجى إدخال بريد إلكتروني صحيح."
+  "INVALID_EMAIL": "يرجى إدخال بريد إلكتروني صحيح.",
+  "INVALID_DATE": "تاريخ غير صحيح",
+  "PHONE_NUMBERS_ONLY": "الرجاء إدخال رقم صحيح",
+  "PASSWORD_TOO_SHORT": "كلمة المرور قصيرة",
+  "PASSWORDS_DONT_MATCH": "كلمة المرور غير مطابقة",
+
+  "FORGOT_PASSWORD": "نسيت كلمة المرور",
+  "ACTIVATE_ACCOUNT":"تفعيل الحساب"
 }
