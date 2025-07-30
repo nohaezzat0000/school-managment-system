@@ -24,10 +24,12 @@
   "SIGN_UP_TITLE": "Create a new account",
 
   "EMAIL": "Email",
+  "USERNAME": "Username",
   "PASSWORD": "Password",
   "FULL_NAME": "Full Name",
 
   "ENTER_EMAIL": "Enter your email",
+  "ENTER_USERNAME": "Enter your username",
   "ENTER_PASSWORD": "Enter your password",
   "ENTER_NAME": "Enter your full name",
 
@@ -35,6 +37,9 @@
   "SUBMIT_SIGNUP": "Sign Up",
 
   "REQUIRED_FIELD": "Please fill out this field.",
-  "INVALID_EMAIL": "Please enter a valid email."
+  "INVALID_EMAIL": "Please enter a valid email.",
+
+  "FORGOT_PASSWORD": "Forgot Password",
+  "ACTIVATE_ACCOUNT": "Activate your account"
 }
 

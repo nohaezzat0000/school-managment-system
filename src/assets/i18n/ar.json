@@ -23,10 +23,12 @@
   "SIGN_UP": "إنشاء حساب",
   "SIGN_UP_TITLE": "إنشاء حساب جديد",
 
+  "USERNAME": "أسم المستخدم",
   "EMAIL": "البريد الإلكتروني",
   "PASSWORD": "كلمة المرور",
   "FULL_NAME": "الاسم الكامل",
 
+  "ENTER_USERNAME": "أدخل أسم المستخدم",
   "ENTER_EMAIL": "أدخل بريدك الإلكتروني",
   "ENTER_PASSWORD": "أدخل كلمة المرور",
   "ENTER_NAME": "أدخل اسمك الكامل",
@@ -35,5 +37,8 @@
   "SUBMIT_SIGNUP": "إنشاء الحساب",
 
   "REQUIRED_FIELD": "يرجى تعبئة هذا الحقل.",
-  "INVALID_EMAIL": "يرجى إدخال بريد إلكتروني صحيح."
+  "INVALID_EMAIL": "يرجى إدخال بريد إلكتروني صحيح.",
+
+  "FORGOT_PASSWORD": "نسيت كلمة المرور",
+  "ACTIVATE_ACCOUNT":"تفعيل الحساب"
 }
