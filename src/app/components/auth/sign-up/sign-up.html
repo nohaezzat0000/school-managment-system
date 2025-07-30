@@ -1,1 +1,99 @@
-<p>sign-up works!</p>
+<p-toast></p-toast>
+
+<div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-md w-full space-y-8">
+    
+    <!-- Header -->
+    <div class="text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-2">
+        {{ 'SIGN_UP' | translate }}
+      </h2>
+      <p class="text-gray-600">
+        {{ 'SIGN_UP_TITLE' | translate }}
+      </p>
+    </div>
+
+    <!-- Form Card -->
+    <div class="bg-white py-8 px-6 shadow-sm rounded-lg border">
+      <form [formGroup]="signUpForm" (ngSubmit)="onSignUp()" class="space-y-5">
+
+        <!-- Username -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">{{ 'USERNAME' | translate }}</label>
+          <input pInputText formControlName="username" [placeholder]="'ENTER_USERNAME' | translate" class="w-full" />
+          <small *ngIf="signUpForm.get('username')?.touched && signUpForm.get('username')?.invalid" class="text-red-600">
+            {{ getFieldErrorMessage('username') | translate }}
+          </small>
+        </div>
+
+        <!-- First Name -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">{{ 'FIRST_NAME' | translate }}</label>
+          <input pInputText formControlName="firstName" [placeholder]="'ENTER_FIRST_NAME' | translate" class="w-full" />
+          <small *ngIf="signUpForm.get('firstName')?.touched && signUpForm.get('firstName')?.invalid" class="text-red-600">
+            {{ getFieldErrorMessage('firstName') | translate }}
+          </small>
+        </div>
+
+        <!-- Last Name -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">{{ 'LAST_NAME' | translate }}</label>
+          <input pInputText formControlName="lastName" [placeholder]="'ENTER_LAST_NAME' | translate" class="w-full" />
+          <small *ngIf="signUpForm.get('lastName')?.touched && signUpForm.get('lastName')?.invalid" class="text-red-600">
+            {{ getFieldErrorMessage('lastName') | translate }}
+          </small>
+        </div>
+
+        <!-- Date of Birth -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">{{ 'DATE_OF_BIRTH' | translate }}</label>
+          <p-datepicker formControlName="dateOfBirth" inputClass="w-full" [placeholder]="'SELECT_DOB' | translate" showIcon />
+          <small *ngIf="signUpForm.get('dateOfBirth')?.touched && signUpForm.get('dateOfBirth')?.invalid" class="text-red-600">
+            {{ getFieldErrorMessage('dateOfBirth') | translate }}
+          </small>
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">{{ 'EMAIL' | translate }}</label>
+          <input pInputText formControlName="email" type="email" [placeholder]="'ENTER_EMAIL' | translate" class="w-full" />
+          <small *ngIf="signUpForm.get('email')?.touched && signUpForm.get('email')?.invalid" class="text-red-600">
+            {{ getFieldErrorMessage('email') | translate }}
+          </small>
+        </div>
+
+        <!-- Phone Number -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">{{ 'PHONE_NUMBER' | translate }}</label>
+          <input pInputText formControlName="phoneNumber" [placeholder]="'ENTER_PHONE' | translate" class="w-full" />
+          <small *ngIf="signUpForm.get('phoneNumber')?.touched && signUpForm.get('phoneNumber')?.invalid" class="text-red-600">
+            {{ getFieldErrorMessage('phoneNumber') | translate }}
+          </small>
+        </div>
+
+        <!-- Password -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">{{ 'PASSWORD' | translate }}</label>
+          <input pInputText type="password" formControlName="password" [placeholder]="'ENTER_PASSWORD' | translate" class="w-full" />
+          <small *ngIf="signUpForm.get('password')?.touched && signUpForm.get('password')?.invalid" class="text-red-600">
+            {{ getFieldErrorMessage('password') | translate }}
+          </small>
+        </div>
+
+        <!-- Confirm Password -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">{{ 'CONFIRM_PASSWORD' | translate }}</label>
+          <input pInputText type="password" formControlName="confirmPassword" [placeholder]="'CONFIRM_PASSWORD' | translate" class="w-full" />
+          <small *ngIf="signUpForm.get('confirmPassword')?.touched && signUpForm.get('confirmPassword')?.invalid || passwordMismatch" class="text-red-600">
+            {{ passwordMismatch ? ('PASSWORDS_DONT_MATCH' | translate) : (getFieldErrorMessage('confirmPassword') | translate) }}
+          </small>
+        </div>
+
+        <!-- Submit -->
+        <div class="pt-3">
+          <p-button type="submit" [label]="'SIGN_UP' | translate" styleClass="w-full" [disabled]="signUpForm.invalid"></p-button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
