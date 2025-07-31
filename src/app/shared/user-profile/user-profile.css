@@ -1,0 +1,79 @@
+.profile-card {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 2rem;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.avatar {
+  margin-right: 1.5rem;
+}
+
+.profile-info h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+
+.profile-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* مسافة بين الحقول */
+  margin-top: 1.5rem;
+}
+
+.field-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.field-row label {
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+}
+
+.field-row span {
+  flex: 2;
+  text-align: right;
+  color: #444;
+}
+
+
+
+.profile-info p {
+  margin: 0.2rem 0 0;
+  color: #666;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-actions {
+  text-align: right;
+  margin-top: 2rem;
+}
+
+
+

@@ -17,5 +17,8 @@
   box-shadow: none !important;
 }
 
-
+/* تعديل محاذاة العناصر داخل menubar إلى أقصى اليمين */
+.custom-menubar-right .p-menubar-root {
+  justify-content: flex-end !important;
+}
 

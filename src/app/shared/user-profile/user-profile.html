@@ -1,0 +1,50 @@
+<p-card class="profile-card mt-8">
+  <div class="profile-header">
+    <div class="header-left">
+      <p-avatar
+        image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+        shape="circle"
+        size="xlarge"
+      ></p-avatar>
+      <div class="profile-info">
+        <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+        <p>{{ user.email }}</p>
+      </div>
+    </div>
+
+    <!-- أيقونة تعديل -->
+    <button
+      pButton
+      type="button"
+      icon="pi pi-pencil"
+      class="p-button-text p-button-rounded edit-button"
+      (click)="onEdit()"
+    ></button>
+  </div>
+
+  <p-divider align="left">
+    <span>User Information</span>
+  </p-divider>
+
+  <div class="profile-fields">
+    <div class="field-row">
+      <label>Phone:</label>
+      <span>{{ user.phone }}</span>
+    </div>
+    <div class="field-row">
+      <label>Birthdate:</label>
+      <span>{{ user.birthdate | date }}</span>
+    </div>
+    <div class="field-row">
+      <label>Job Title:</label>
+      <span>{{ user.job }}</span>
+    </div>
+  </div>
+</p-card>
+
+
+
+
+
+
+

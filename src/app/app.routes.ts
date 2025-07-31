@@ -23,7 +23,8 @@ export const routes: Routes = [
     children: [
       { path: '', component: Home },
       { path: 'auth/signin', component: SignIn },
-      {path: 'auth/signup', component: SignUp}
+      {path: 'auth/signup', component: SignUp},
+
       // more public routes
     ]
   },
@@ -39,7 +40,10 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./components/admin-mangment/admin-dashboard/users/users.routes').then((m) => m.routes),
   },
-      // more admin routes
+      {
+        path: 'profile',
+        loadComponent: () => import('./shared/user-profile/user-profile').then(m => m.UserProfile)
+      }// more admin routes
     ]
   },
   {
