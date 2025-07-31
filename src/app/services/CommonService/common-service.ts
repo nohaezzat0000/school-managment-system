@@ -1,13 +1,14 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Observable, map} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CommonService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   getHeaders(): HttpHeaders {
     const token = localStorage.getItem('token') || '';
@@ -42,7 +43,7 @@ export class CommonService {
     headers?: HttpHeaders
   ): Observable<T> {
     const mergedHeaders = headers || this.getHeaders();
-    return this.http.get<any>(url, { headers: mergedHeaders }).pipe(
+    return this.http.get<any>(url, {headers: mergedHeaders}).pipe(
       map((data: any) => {
         // errors handling
         return data;

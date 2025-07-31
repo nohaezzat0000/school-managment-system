@@ -1,0 +1,21 @@
+
+/* إزالة الحدود والظلال من p-menubar */
+.custom-menubar-right {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* إزالة الحدود والظلال من p-breadcrumb */
+.ui-breadcrumb {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* إزالة الحدود من عناصر card */
+.card {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+
