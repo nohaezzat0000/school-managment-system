@@ -1,24 +1,26 @@
-<p-card class="profile-card mt-8">
-  <div class="profile-header">
-    <div class="header-left">
+<p-card class="profile-card mt-8" *ngIf="user"> <!-- تأكد إن بيانات اليوزر وصلت -->
+  <div class="profile-header d-flex justify-content-between align-items-center">
+
+    <div class="header-left d-flex align-items-center">
       <p-avatar
         image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
         shape="circle"
         size="xlarge"
+        class="mr-3"
       ></p-avatar>
       <div class="profile-info">
-        <h2>{{ user.firstName }} {{ user.lastName }}</h2>
-        <p>{{ user.email }}</p>
+        <h2 class="m-0">{{ user.firstName }} {{ user.lastName }}</h2>
+        <p class="m-0 text-muted">{{ user.email }}</p>
       </div>
     </div>
 
-    <!-- أيقونة تعديل -->
     <button
       pButton
       type="button"
       icon="pi pi-pencil"
       class="p-button-text p-button-rounded edit-button"
       (click)="onEdit()"
+      aria-label="Edit Profile"
     ></button>
   </div>
 
@@ -33,7 +35,7 @@
     </div>
     <div class="field-row">
       <label>Birthdate:</label>
-      <span>{{ user.birthdate | date }}</span>
+      <span>{{ user.birthdate | date: 'longDate' }}</span>
     </div>
     <div class="field-row">
       <label>Job Title:</label>
@@ -41,6 +43,7 @@
     </div>
   </div>
 </p-card>
+
 
 
 
