@@ -1,10 +1,11 @@
 import { Routes } from '@angular/router';
 import { Home } from './components/home/home';
-import {Auth} from './components/auth/auth';
 import {PublicLayout} from './layouts/public-layout/public-layout';
 import {AdminLayout} from './layouts/admin-layout/admin-layout';
 import {AdminDashboard} from './components/admin-mangment/admin-dashboard/admin-dashboard';
 import { RoleGuard } from './appCommon/guards/role-guard';
+import { SignIn } from './components/auth/sign-in/sign-in';
+import { SignUp } from './components/auth/sign-up/sign-up';
 // export const routes: Routes = [
 //     { path: '', component: Home},
 //     {path: 'auth' , component: Auth},
@@ -21,7 +22,8 @@ export const routes: Routes = [
     component: PublicLayout,
     children: [
       { path: '', component: Home },
-      { path: 'auth', component: Auth },
+      { path: 'auth/signin', component: SignIn },
+      { path: 'auth/signup', component: SignUp },
       // more public routes
     ]
   },
