@@ -23,13 +23,15 @@ export const routes: Routes = [
     children: [
       { path: '', component: Home },
       { path: 'auth/signin', component: SignIn },
-      { path: 'auth/signup', component: SignUp },
+      {path: 'auth/signup', component: SignUp}
       // more public routes
     ]
   },
   {
     path: 'admin',
     component: AdminLayout,
+    // canActivate: [RoleGuard],
+    // data: {roles: ['Admin']},
     children: [
       { path: 'dashboard', component: AdminDashboard },
       {
