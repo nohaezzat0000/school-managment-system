@@ -6,10 +6,7 @@
 }
 
 /* إزالة الحدود والظلال من p-breadcrumb */
-.ui-breadcrumb {
-  border: none !important;
-  box-shadow: none !important;
-}
+
 
 /* إزالة الحدود من عناصر card */
 .card {

@@ -1,0 +1,13 @@
+/* Remove card styles */
+.card {
+  box-shadow: none !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Optional: remove breadcrumb borders (if any) */
+p-breadcrumb {
+  border: none !important;
+  box-shadow: none !important;
+}
+

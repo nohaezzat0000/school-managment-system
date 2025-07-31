@@ -21,7 +21,7 @@ export const routes: Routes = [
     path: '',
     component: PublicLayout,
     children: [
-      { path: '', component: Home },
+      { path: '', component: Home, data: { breadcrumb: 'Home' } },
       { path: 'auth/signin', component: SignIn },
       {path: 'auth/signup', component: SignUp},
 
@@ -34,7 +34,7 @@ export const routes: Routes = [
     // canActivate: [RoleGuard],
     // data: {roles: ['Admin']},
     children: [
-      { path: 'dashboard', component: AdminDashboard },
+      { path: 'dashboard', component: AdminDashboard, data: { breadcrumb: 'Admin Dashbored' }},
       {
           path: 'users',
     loadChildren: () =>
@@ -42,8 +42,8 @@ export const routes: Routes = [
   },
       {
         path: 'profile',
-        loadComponent: () => import('./shared/user-profile/user-profile').then(m => m.UserProfile)
-      }// more admin routes
+        loadComponent: () => import('./shared/user-profile/user-profile').then(m => m.UserProfile), data: { breadcrumb: 'Profile'}
+        }// more admin routes
     ]
   },
   {

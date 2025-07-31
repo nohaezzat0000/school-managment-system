@@ -4,17 +4,12 @@ import { BadgeModule } from 'primeng/badge';
 import { CommonModule } from '@angular/common';
 import { AvatarModule } from 'primeng/avatar';
 import { MenuItem } from 'primeng/api';
-import { BreadcrumbModule } from 'primeng/breadcrumb';
 
-interface BreadcrumbItem {
-  label: string;
-  routerLink?: string;
-}
 
 @Component({
   selector: 'app-app-nav-bar',
   standalone: true,
-  imports: [MenubarModule, BadgeModule, CommonModule, AvatarModule, BreadcrumbModule],
+  imports: [MenubarModule, BadgeModule, CommonModule, AvatarModule],
   templateUrl: './app-nav-bar.html',
   styleUrl: './app-nav-bar.css'
 })
@@ -32,7 +27,7 @@ export class AppNavBar {
       </div>
     `, escape: false,
       items: [
-        {label: 'Home', icon: 'pi pi-home'},
+        {label: 'Home', icon: 'pi pi-home', routerLink: ''},
         {label: 'Profile', icon: 'pi pi-user', routerLink: '/admin/profile'},
         {label: 'sign-out', icon: 'pi pi-sign-out'}
       ]
@@ -45,9 +40,4 @@ export class AppNavBar {
 
   home = { icon: 'pi pi-home' };
 
-  items2: BreadcrumbItem[] = [
-    { label: '', routerLink: '/' },
-    { label: '', routerLink: '/' },
-    { label: '', routerLink: '/' }
-  ];
 }
