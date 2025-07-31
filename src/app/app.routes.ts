@@ -30,8 +30,6 @@ export const routes: Routes = [
   {
     path: 'admin',
     component: AdminLayout,
-    canActivate: [RoleGuard],
-    data: {roles: ['Admin']},
     children: [
       { path: 'dashboard', component: AdminDashboard },
       {
