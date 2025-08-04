@@ -53,6 +53,17 @@
   "PASSWORDS_DONT_MATCH": "Passwords do not match",
 
   "FORGOT_PASSWORD": "Forgot Password",
-  "ACTIVATE_ACCOUNT": "Activate your account"
+  "ACTIVATE_ACCOUNT": "Activate your account",
+
+  "SUCCESS": "Success",
+  "ERROR": "Error",
+  "WARNING": "Warning",
+  "SIGNUP_SUCCESS": "Account created successfully! Redirecting to login...",
+  "SIGNUP_FAILED": "Failed to create account. Please try again.",
+  "LOGIN_SUCCESS": "Welcome! Redirecting to dashboard...",
+  "LOGIN_FAILED": "Login failed. Please check your credentials.",
+  "PLEASE_COMPLETE_FORM": "Please complete all required fields correctly.",
+  "SIGNING_UP": "Creating Account..."
+  
 }
 
