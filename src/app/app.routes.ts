@@ -5,6 +5,10 @@ import {AdminLayout} from './layouts/admin-layout/admin-layout';
 import {AdminDashboard} from './components/admin-mangment/admin-dashboard/admin-dashboard';
 import { SignIn } from './components/auth/sign-in/sign-in';
 import { SignUp } from './components/auth/sign-up/sign-up';
+import {
+  StudentEnrollmentDetail
+} from './components/admin-mangment/admin-dashboard/student-enrollment-detail/student-enrollment-detail';
+
 // export const routes: Routes = [
 //     { path: '', component: Home},
 //     {path: 'auth' , component: Auth},
@@ -22,9 +26,10 @@ export const routes: Routes = [
     children: [
       { path: '', component: Home, data: { breadcrumb: 'Home' } },
       { path: 'auth/signin', component: SignIn },
-      {path: 'auth/signup', component: SignUp},
+      { path: 'auth/signup', component: SignUp },
+      /**/ // more public routes
+      //{ path: 'students', component: StudentEnrollmentRequests },
 
-      // more public routes
     ]
   },
   {
@@ -41,8 +46,22 @@ export const routes: Routes = [
   },
       {
         path: 'profile',
-        loadComponent: () => import('./shared/user-profile/user-profile').then(m => m.UserProfile), data: { breadcrumb: 'Profile'}
-        }// more admin routes
+        loadComponent: () => import('./shared/user-profile/user-profile').then(m => m.UserProfile),
+        data: {breadcrumb: 'Profile'},
+      },
+      {
+        path: 'student-enrollment-requests',
+        loadComponent: () => import('./components/admin-mangment/admin-dashboard/student-enrollment-requests/student-enrollment-requests').then(m => m.StudentEnrollmentRequests),
+        data: { breadcrump: 'Student encrollment request'}
+      },
+      {
+        path: 'student-enrollment-detail',
+        loadComponent: () => import('./components/admin-mangment/admin-dashboard/student-enrollment-detail/student-enrollment-detail').then(m => m.StudentEnrollmentDetail),
+        data: { breadcrump: 'Student encrollment details'}
+      }
+
+
+// more admin
     ]
   },
   {

@@ -1,0 +1,112 @@
+
+/* Headings */
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.h4 {
+  color: #555;
+  font-weight: 600;
+  padding-left: 10px;
+  border-left: 4px solid #1976d2;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Field Rows */
+.grid > div {
+  padding: 0.5rem 0;
+}
+
+strong {
+  color: #444;
+  min-width: 180px;
+  display: inline-block;
+}
+
+/* Section Spacing */
+.mb-3 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 2rem !important;
+}
+
+/* Image Styling */
+img {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 4px;
+  background-color: white;
+  transition: transform 0.2s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+.profile-card .p-card {
+  background-color: white !important;
+  box-shadow: none !important; /* اختياري لإزالة الظل */
+}
+
+/* Uploaded Document Section */
+.flex.flex-wrap.gap-2 img {
+  margin: 0.25rem;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Card Grid Images */
+.col-12.md\:col-4 {
+  margin-bottom: 1rem;
+}
+.profile-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
+  margin-top: 1.5rem;
+}
+
+.field-row {
+  flex: 0 0 calc(50% - 1rem); /* two columns */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.field-row label {
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+}
+
+.field-row span {
+  flex: 2;
+  text-align: right;
+  color: #444;
+}::ng-deep .p-card {
+   background-color: #fff !important;
+   border: 1px solid #e0e0e0 !important;
+   border-radius: 8px !important;
+   padding: 1rem !important;
+   box-shadow: none !important;
+ }
+
+.form-actions {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  box-sizing: border-box;
+}
+
+

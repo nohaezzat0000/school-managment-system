@@ -1,0 +1,51 @@
+ <h2 class="mt-2 text-xl font-bold mb-4">Student Enrollment Requests</h2>
+
+  <p-table
+    [value]="Students"
+    [paginator]="true"
+    [rows]="5"
+    [tableStyle]="{ 'min-width': '70rem' }"
+    [rowsPerPageOptions]="[5, 10, 20]"
+    class="p-datatable-sm"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th class="text-sm text-gray-700">User ID</th>
+        <th class="text-sm text-gray-700">Student Name</th>
+        <th class="text-sm text-gray-700">Student Code</th>
+        <th class="text-sm text-gray-700">Previous Certificate</th>
+        <th class="text-sm text-gray-700">Total Grade</th>
+        <th class="text-sm text-gray-700">Path</th>
+        <th class="text-sm text-gray-700">Registration Date</th>
+        <th class="text-sm text-gray-700 text-center">Actions</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-student>
+      <tr>
+        <td>{{ student.userId }}</td>
+        <td>{{ student.studentName }}</td>
+        <td>{{ student.studentCode }}</td>
+        <td>{{ student.previousCertificate }}</td>
+        <td>{{ student.totalGrade }}</td>
+        <td>{{ student.path }}</td>
+        <td>{{ student.registrationDate }}</td>
+        <td class="flex justify-content-center">
+          <button
+            pButton
+            icon="pi pi-eye"
+            class="p-button-sm p-button-text text-primary"
+            tooltip="View Details"
+            tooltipPosition="top"
+            (click)="viewDetails(student)"
+          ></button>
+        </td>
+
+      </tr>
+    </ng-template>
+  </p-table>
+
+
+
+
+

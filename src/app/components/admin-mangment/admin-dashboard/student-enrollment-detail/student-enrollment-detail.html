@@ -1,0 +1,139 @@
+<div class="grid p-3 student-details">
+  <div class="col-12">
+    <h2 class="section-title">Student Enrollment Details</h2>
+  </div>
+
+  <!-- Personal Info -->
+  <div class="col-12">
+    <p-card class="profile-card mb-4">
+      <div class="profile-header">
+        <h4 class="m-0">Personal Information</h4>
+      </div>
+      <p-divider></p-divider>
+      <div class="profile-fields">
+        <div class="field-row"><label>Full Name (Arabic):</label><span>{{ student.personalInfo.fullNameArabic }}</span></div>
+        <div class="field-row"><label>Full Name (English):</label><span>{{ student.personalInfo.fullNameEnglish }}</span></div>
+        <div class="field-row"><label>National ID:</label><span>{{ student.personalInfo.nationalId }}</span></div>
+        <div class="field-row"><label>Birth Date:</label><span>{{ student.personalInfo.birthDate }}</span></div>
+        <div class="field-row"><label>Gender:</label><span>{{ student.personalInfo.gender }}</span></div>
+        <div class="field-row"><label>Nationality:</label><span>{{ student.personalInfo.nationality }}</span></div>
+        <div class="field-row"><label>Religion:</label><span>{{ student.personalInfo.religion }}</span></div>
+        <div class="field-row"><label>Birth Place:</label><span>{{ student.personalInfo.birthPlace }}</span></div>
+        <div class="field-row" *ngIf="student.personalInfo.passportNumber"><label>Passport Number:</label><span>{{ student.personalInfo.passportNumber }}</span></div>
+      </div>
+    </p-card>
+  </div>
+
+  <!-- Contact Info -->
+  <div class="col-12">
+    <p-card class="profile-card mb-4">
+      <div class="profile-header">
+        <h4 class="m-0">Contact & Address</h4>
+      </div>
+      <p-divider></p-divider>
+      <div class="profile-fields">
+        <div class="field-row"><label>Mobile Number:</label><span>{{ student.contactInfo.mobileNumber }}</span></div>
+        <div class="field-row"><label>Email:</label><span>{{ student.contactInfo.email }}</span></div>
+        <div class="field-row"><label>Governorate:</label><span>{{ student.contactInfo.address.governorate }}</span></div>
+        <div class="field-row"><label>District:</label><span>{{ student.contactInfo.address.district }}</span></div>
+        <div class="field-row"><label>Street:</label><span>{{ student.contactInfo.address.street }}</span></div>
+        <div class="field-row"><label>Building Number:</label><span>{{ student.contactInfo.address.buildingNumber }}</span></div>
+        <div class="field-row" *ngIf="student.contactInfo.nearestTransport"><label>Nearest Transport:</label><span>{{ student.contactInfo.nearestTransport }}</span></div>
+      </div>
+    </p-card>
+  </div>
+
+  <!-- Guardian Info -->
+  <div class="col-12">
+    <p-card class="profile-card mb-4">
+      <div class="profile-header">
+        <h4 class="m-0">Guardian Information</h4>
+      </div>
+      <p-divider></p-divider>
+      <div class="profile-fields">
+        <div class="field-row"><label>Full Name:</label><span>{{ student.guardianInfo.fullName }}</span></div>
+        <div class="field-row"><label>Relationship:</label><span>{{ student.guardianInfo.relationship }}</span></div>
+        <div class="field-row"><label>National ID:</label><span>{{ student.guardianInfo.nationalId }}</span></div>
+        <div class="field-row"><label>Mobile Number:</label><span>{{ student.guardianInfo.mobileNumber }}</span></div>
+        <div class="field-row"><label>Email:</label><span>{{ student.guardianInfo.email }}</span></div>
+        <div class="field-row" *ngIf="student.guardianInfo.occupation"><label>Occupation:</label><span>{{ student.guardianInfo.occupation }}</span></div>
+        <div class="field-row" *ngIf="student.guardianInfo.workplace"><label>Workplace:</label><span>{{ student.guardianInfo.workplace }}</span></div>
+      </div>
+    </p-card>
+  </div>
+
+  <!-- Academic Info -->
+  <div class="col-12">
+    <p-card class="profile-card mb-4">
+      <div class="profile-header">
+        <h4 class="m-0">Academic Background</h4>
+      </div>
+      <p-divider></p-divider>
+      <div class="profile-fields">
+        <div class="field-row"><label>Last Certificate:</label><span>{{ student.academicInfo.lastCertificate }}</span></div>
+        <div class="field-row"><label>Previous School:</label><span>{{ student.academicInfo.previousSchool }}</span></div>
+        <div class="field-row"><label>Graduation Year:</label><span>{{ student.academicInfo.graduationYear }}</span></div>
+        <div class="field-row"><label>Total Score:</label><span>{{ student.academicInfo.totalScore }}</span></div>
+        <div class="field-row"><label>General Grade:</label><span>{{ student.academicInfo.generalGrade }}</span></div>
+      </div>
+    </p-card>
+  </div>
+
+  <!-- Documents -->
+  <div class="col-12">
+    <p-card class="profile-card mb-4">
+      <div class="profile-header">
+        <h4 class="m-0">Uploaded Documents</h4>
+      </div>
+      <p-divider></p-divider>
+      <div class="grid">
+        <div class="col-12 md:col-4" *ngIf="student.documents.profilePhoto">
+          <p><strong>Profile Photo:</strong></p>
+          <img [src]="student.documents.profilePhoto" alt="Profile" width="100" class="mb-2" />
+        </div>
+        <div class="col-12 md:col-4" *ngIf="student.documents.certificateImage">
+          <p><strong>Certificate Image:</strong></p>
+          <img [src]="student.documents.certificateImage" alt="Certificate" width="100" class="mb-2" />
+        </div>
+        <div class="col-12 md:col-4" *ngIf="student.documents.nationalIdOrBirthCert">
+          <p><strong>National ID / Birth Cert:</strong></p>
+          <img [src]="student.documents.nationalIdOrBirthCert" alt="ID/Birth Cert" width="100" class="mb-2" />
+        </div>
+        <div class="col-12 md:col-4" *ngIf="student.documents.guardianIdImage">
+          <p><strong>Guardian ID:</strong></p>
+          <img [src]="student.documents.guardianIdImage" alt="Guardian ID" width="100" class="mb-2" />
+        </div>
+        <div class="col-12" *ngIf="student.documents.achievementCertificates?.length">
+          <p><strong>Achievement Certificates:</strong></p>
+          <div class="flex flex-wrap gap-2">
+            <img *ngFor="let cert of student.documents.achievementCertificates" [src]="cert" alt="Achievement" width="100" />
+          </div>
+        </div>
+      </div>
+    </p-card>
+  </div>
+  <!-- Action Buttons -->
+  <div class="form-actions">
+    <button
+      pButton
+      label="Accept"
+      icon="pi pi-check"
+      class="p-button-success mr-2"
+      (click)="onAccept()"
+    ></button>
+
+    <button
+      pButton
+      label="Reject"
+      icon="pi pi-times"
+      class="p-button-danger"
+      (click)="onReject()"
+    ></button>
+  </div>
+
+</div>
+
+
+
+
+

@@ -18,14 +18,6 @@ import { UserService } from '../../services/userService/user';
   styleUrl: './user-profile.css'
 })
 export class UserProfile implements OnInit{
-  /*user = {
-    firstName: ' John',
-    lastName: ' Doe',
-    email: ' john.doe@example.com',
-    phone: ' 0551234567',
-    birthdate: new Date('1995-04-12'),
-    job: ' Software Developer'
-  };*/
 
   user: any = null;
 constructor( private userService: UserService) {

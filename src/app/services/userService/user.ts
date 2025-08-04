@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'https://0a57e379-8a28-4a74-a70e-451fd7faeca6.mock.pstmn.io/userProfile';
+  private apiUrl = 'http://localhost:8080/api/users/Profile';
 
   constructor(private http: HttpClient) {}
 
