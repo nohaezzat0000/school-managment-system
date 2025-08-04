@@ -63,10 +63,11 @@
           <button
             pButton
             type="submit"
-            [label]="'SIGN_IN' | translate"
+            [label]="isLoading ? ('SIGNING_IN' | translate) : ('SIGN_IN' | translate)"
             class="w-full h-3rem font-medium border-round"
             styleClass="p-button-primary"
-            [disabled]="signInForm.invalid">
+            [disabled]="signInForm.invalid || isLoading"
+            [loading]="isLoading">
           </button>
         </div>
       </form>
@@ -83,7 +84,6 @@
           <a href="#" class="text-primary hover:text-primary-600 transition-colors transition-duration-150">
             {{ 'ACTIVATE_ACCOUNT' | translate }}
           </a>
-
         </div>
       </div>
     </div>

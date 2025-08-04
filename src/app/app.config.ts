@@ -1,6 +1,6 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import {provideHttpClient, withInterceptors, withInterceptorsFromDi} from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { providePrimeNG } from 'primeng/config';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core'
@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 import { routes } from './app.routes';
 import { PRIME_NG_MODULES } from './primeng.config';
 import Aura from '@primeuix/themes/aura';
-import {AuthInterceptor} from './appCommon/interceptors/auth-interceptor';
+import { AuthInterceptor } from './appCommon/interceptors/auth-interceptor';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -18,12 +18,14 @@ export function HttpLoaderFactory(http: HttpClient) {
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
-    provideHttpClient(),
+    provideHttpClient(withInterceptorsFromDi()),
     provideAnimations(),
     importProvidersFrom(...PRIME_NG_MODULES),
     providePrimeNG({
       theme: {
-        preset: Aura}}),
+        preset: Aura
+      }
+    }),
     importProvidersFrom(
       TranslateModule.forRoot({
         defaultLanguage: 'en',
@@ -34,9 +36,11 @@ export const appConfig: ApplicationConfig = {
         }
       })
     ),
-
-  provideHttpClient(withInterceptorsFromDi()),
-  AuthInterceptor
-
+    // Properly register the AuthInterceptor
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
   ]
 };

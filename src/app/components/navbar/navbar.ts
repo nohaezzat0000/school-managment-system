@@ -40,22 +40,4 @@ export class Navbar implements OnInit {
     document.documentElement.dir = dir;
     document.documentElement.lang = lang;
   }
-
-  updateMenuItems() {
-    this.translate.get([
-      'navbar.home',
-      'navbar.products',
-      'navbar.contact',
-      'navbar.cart'
-    ]).subscribe(translations => {
-      this.items = [
-        { label: translations['navbar.home'], icon: 'pi pi-home', routerLink: '/' },
-        { label: translations['navbar.products'], icon: 'pi pi-box', routerLink: '/products' },
-        { label: translations['navbar.contact'], icon: 'pi pi-envelope', routerLink: '/contact' },
-        { label: translations['navbar.cart'], icon: 'pi pi-shopping-cart', routerLink: '/cart' }
-      ];
-    });
-  }
-
-
 }

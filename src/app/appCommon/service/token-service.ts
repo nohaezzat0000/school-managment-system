@@ -1,27 +1,27 @@
-import { Injectable } from '@angular/core';
+// import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class TokenService {
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class TokenService {
 
-  private TOKEN_KEY = 'accessToken';
+//   private TOKEN_KEY = 'accessToken';
 
-  constructor() {}
+//   constructor() {}
 
-  // Store token securely
-  public setToken(token: string): void {
-    sessionStorage.setItem(this.TOKEN_KEY, token);
-  }
+//   // Store token securely
+//   public setToken(token: string): void {
+//     sessionStorage.setItem(this.TOKEN_KEY, token);
+//   }
 
-  // Retrieve token
-  public getToken(): string | null {
-    return sessionStorage.getItem(this.TOKEN_KEY);
-  }
+//   // Retrieve token
+//   public getToken(): string | null {
+//     return sessionStorage.getItem(this.TOKEN_KEY);
+//   }
 
-  // Remove token
-  public removeToken(): void {
-    sessionStorage.removeItem(this.TOKEN_KEY);
-  }
+//   // Remove token
+//   public removeToken(): void {
+//     sessionStorage.removeItem(this.TOKEN_KEY);
+//   }
 
-}
+// }

@@ -3,7 +3,6 @@ import { Home } from './components/home/home';
 import {PublicLayout} from './layouts/public-layout/public-layout';
 import {AdminLayout} from './layouts/admin-layout/admin-layout';
 import {AdminDashboard} from './components/admin-mangment/admin-dashboard/admin-dashboard';
-import { RoleGuard } from './appCommon/guards/role-guard';
 import { SignIn } from './components/auth/sign-in/sign-in';
 import { SignUp } from './components/auth/sign-up/sign-up';
 // export const routes: Routes = [
