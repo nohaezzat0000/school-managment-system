@@ -4,16 +4,17 @@ import { BadgeModule } from 'primeng/badge';
 import { CommonModule } from '@angular/common';
 import { AvatarModule } from 'primeng/avatar';
 import { MenuItem } from 'primeng/api';
-
+import {TranslateModule, TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-app-nav-bar',
   standalone: true,
-  imports: [MenubarModule, BadgeModule, CommonModule, AvatarModule],
+  imports: [MenubarModule, BadgeModule, CommonModule, AvatarModule, TranslateModule],
   templateUrl: './app-nav-bar.html',
   styleUrl: './app-nav-bar.css'
 })
 export class AppNavBar {
+  currentLang: string = 'en';
 
   items: MenuItem[] = [
     {
@@ -36,8 +37,22 @@ export class AppNavBar {
       icon: 'pi pi-bell'
     }
   ];
-
+  constructor(private translate: TranslateService) {
+    this.currentLang = this.translate.currentLang || 'en';
+    this.translate.use(this.currentLang);
+    this.setDirection(this.currentLang);
+  }
 
   home = { icon: 'pi pi-home' };
+  toggleLang() {
+    this.currentLang = this.currentLang === 'en' ? 'ar' : 'en';
+    this.translate.use(this.currentLang);
+    this.setDirection(this.currentLang);
+  }
 
+  private setDirection(lang: string) {
+    const dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.dir = dir;
+    document.documentElement.lang = lang;
+  }
 }

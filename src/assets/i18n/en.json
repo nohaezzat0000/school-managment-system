@@ -63,7 +63,49 @@
   "LOGIN_SUCCESS": "Welcome! Redirecting to dashboard...",
   "LOGIN_FAILED": "Login failed. Please check your credentials.",
   "PLEASE_COMPLETE_FORM": "Please complete all required fields correctly.",
-  "SIGNING_UP": "Creating Account..."
-  
+  "SIGNING_UP": "Creating Account...",
+
+
+  "STUDENT_ENROLLMENT_DETAILS": "Student Enrollment Details",
+  "PERSONAL_INFORMATION": "Personal Information",
+  "FULL_NAME_AR": "Full Name (Arabic)",
+  "FULL_NAME_EN": "Full Name (English)",
+  "NATIONAL_ID": "National ID",
+  "BIRTH_DATE": "Birth Date",
+  "GENDER": "Gender",
+  "NATIONALITY": "Nationality",
+  "RELIGION": "Religion",
+  "BIRTH_PLACE": "Birth Place",
+  "PASSPORT_NUMBER": "Passport Number",
+  "CONTACT_AND_ADDRESS": "Contact & Address",
+  "MOBILE_NUMBER": "Mobile Number",
+  "EMAIL": "Email",
+  "GOVERNORATE": "Governorate",
+  "DISTRICT": "District",
+  "STREET": "Street",
+  "BUILDING_NUMBER": "Building Number",
+  "NEAREST_TRANSPORT": "Nearest Transport",
+  "GUARDIAN_INFORMATION": "Guardian Information",
+  "FULL_NAME": "Full Name",
+  "RELATIONSHIP": "Relationship",
+  "OCCUPATION": "Occupation",
+  "WORKPLACE": "Workplace",
+  "ACADEMIC_BACKGROUND": "Academic Background",
+  "LAST_CERTIFICATE": "Last Certificate",
+  "PREVIOUS_SCHOOL": "Previous School",
+  "GRADUATION_YEAR": "Graduation Year",
+  "TOTAL_SCORE": "Total Score",
+  "GENERAL_GRADE": "General Grade",
+  "UPLOADED_DOCUMENTS": "Uploaded Documents",
+  "PROFILE_PHOTO": "Profile Photo",
+  "CERTIFICATE_IMAGE": "Certificate Image",
+  "NATIONAL_ID_BIRTH_CERT": "National ID / Birth Cert",
+  "GUARDIAN_ID": "Guardian ID",
+  "ACHIEVEMENT_CERTIFICATES": "Achievement Certificates",
+  "ACCEPT": "Accept",
+  "REJECT": "Reject"
+
+
+
 }
 

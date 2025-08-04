@@ -8,7 +8,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ToastModule } from 'primeng/toast';
 import { DatePickerModule } from 'primeng/datepicker';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { AuthService } from '../../../services/auth-service';
+import { AuthService } from '../../../appCommon/service/auth-service';
 import { SignupRequest } from '../auth-dtos';
 
 @Component({

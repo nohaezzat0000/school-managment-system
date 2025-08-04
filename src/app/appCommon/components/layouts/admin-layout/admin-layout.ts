@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { AdminHorizontalMenu } from '../../shared/admin-horizontal-menu/admin-horizontal-menu';
-import { AppNavBar } from '../../shared/app-nav-bar/app-nav-bar';
-import { Appbreadcrumb } from '../../shared/appbreadcrumb/appbreadcrumb';
+import { AdminHorizontalMenu } from '../../admin-horizontal-menu/admin-horizontal-menu';
+import { AppNavBar } from '../../app-nav-bar/app-nav-bar';
+import { Appbreadcrumb } from '../../appbreadcrumb/appbreadcrumb';
 
 @Component({
   selector: 'app-admin-layout',

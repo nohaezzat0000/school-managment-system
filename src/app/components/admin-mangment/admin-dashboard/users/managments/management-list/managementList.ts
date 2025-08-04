@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Table, TableModule } from 'primeng/table';
-import { ManagementService, User } from '../../../../../../services/management';
+import { ManagementService, User } from '../../../../../../appCommon/service/management';
 import { InputTextModule } from 'primeng/inputtext';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';

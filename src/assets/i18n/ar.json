@@ -54,7 +54,7 @@
 
   "FORGOT_PASSWORD": "نسيت كلمة المرور",
   "ACTIVATE_ACCOUNT":"تفعيل الحساب",
-  
+
   "SUCCESS": "نجحت العملية",
   "ERROR": "خطأ",
   "WARNING": "تحذير",
@@ -63,6 +63,48 @@
   "LOGIN_SUCCESS": "مرحباً! يتم الآن التحويل إلى لوحة التحكم...",
   "LOGIN_FAILED": "فشل تسجيل الدخول. يرجى التحقق من بيانات الاعتماد.",
   "PLEASE_COMPLETE_FORM": "يرجى إكمال جميع الحقول المطلوبة بشكل صحيح.",
-  "SIGNING_UP": "جاري إنشاء الحساب..."
+  "SIGNING_UP": "جاري إنشاء الحساب...",
+
+
+  "STUDENT_ENROLLMENT_DETAILS": "تفاصيل تسجيل الطالب",
+  "PERSONAL_INFORMATION": "المعلومات الشخصية",
+  "FULL_NAME_AR": "الاسم الكامل (بالعربية)",
+  "FULL_NAME_EN": "الاسم الكامل (بالإنجليزية)",
+  "NATIONAL_ID": "رقم الهوية",
+  "BIRTH_DATE": "تاريخ الميلاد",
+  "GENDER": "الجنس",
+  "NATIONALITY": "الجنسية",
+  "RELIGION": "الديانة",
+  "BIRTH_PLACE": "مكان الميلاد",
+  "PASSPORT_NUMBER": "رقم الجواز",
+  "CONTACT_AND_ADDRESS": "معلومات الاتصال والعنوان",
+  "MOBILE_NUMBER": "رقم الجوال",
+  "EMAIL": "البريد الإلكتروني",
+  "GOVERNORATE": "المحافظة",
+  "DISTRICT": "الحي",
+  "STREET": "الشارع",
+  "BUILDING_NUMBER": "رقم المبنى",
+  "NEAREST_TRANSPORT": "أقرب وسيلة مواصلات",
+  "GUARDIAN_INFORMATION": "معلومات ولي الأمر",
+  "FULL_NAME": "الاسم الكامل",
+  "RELATIONSHIP": "صلة القرابة",
+  "OCCUPATION": "الوظيفة",
+  "WORKPLACE": "مكان العمل",
+  "ACADEMIC_BACKGROUND": "الخلفية الأكاديمية",
+  "LAST_CERTIFICATE": "آخر شهادة",
+  "PREVIOUS_SCHOOL": "المدرسة السابقة",
+  "GRADUATION_YEAR": "سنة التخرج",
+  "TOTAL_SCORE": "المجموع الكلي",
+  "GENERAL_GRADE": "التقدير العام",
+  "UPLOADED_DOCUMENTS": "الوثائق المرفوعة",
+  "PROFILE_PHOTO": "الصورة الشخصية",
+  "CERTIFICATE_IMAGE": "صورة الشهادة",
+  "NATIONAL_ID_BIRTH_CERT": "بطاقة الهوية / شهادة الميلاد",
+  "GUARDIAN_ID": "هوية ولي الأمر",
+  "ACHIEVEMENT_CERTIFICATES": "شهادات التفوق",
+  "ACCEPT": "قبول",
+  "REJECT": "رفض"
+
+
 
 }

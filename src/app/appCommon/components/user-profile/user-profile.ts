@@ -7,7 +7,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { AvatarModule } from 'primeng/avatar';
 import { PanelModule } from 'primeng/panel';
 import { DividerModule } from 'primeng/divider';
-import { UserService } from '../../services/userService/user';
+import { UserService } from '../../service/userService/user';
 
 @Component({
   selector: 'app-user-profile',

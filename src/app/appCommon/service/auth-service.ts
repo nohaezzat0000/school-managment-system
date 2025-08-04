@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
-import { ApiUrls } from '../appCommon/ApisUrl/api-urls';
+import { ApiUrls } from '../ApisUrl/api-urls';
 import { TokenService } from './token-service';
-import { LoginRequest, SignupRequest, AuthResponse, ApiError } from '../components/auth/auth-dtos';
+import { LoginRequest, SignupRequest, AuthResponse, ApiError } from '../../components/auth/auth-dtos';
 export interface UserResponse {
   id: number;
   username: string;
@@ -53,7 +53,7 @@ export class AuthService {
 
   private handleError = (error: HttpErrorResponse): Observable<never> => {
     let errorMessage = 'An unknown error occurred';
-    
+
     if (error.error instanceof ErrorEvent) {
       // Client-side error
       errorMessage = `Error: ${error.error.message}`;
@@ -73,12 +73,12 @@ export class AuthService {
           errorMessage = `Server returned code: ${error.status}, error message: ${error.message}`;
       }
     }
-    
+
     const apiError: ApiError = {
       message: errorMessage,
       status: error.status || 0
     };
-    
+
     return throwError(() => apiError);
   };
 }

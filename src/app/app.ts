@@ -1,7 +1,8 @@
 import { Component, signal } from '@angular/core';
 import {NavigationEnd, Router, RouterOutlet} from '@angular/router';
-import { Navbar } from './components/navbar/navbar';
+
 import {NgIf} from '@angular/common';
+import {Navbar} from './appCommon/components/navbar/navbar';
 
 @Component({
   selector: 'app-root',

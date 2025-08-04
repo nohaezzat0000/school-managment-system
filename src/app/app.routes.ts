@@ -1,13 +1,13 @@
 import { Routes } from '@angular/router';
-import { Home } from './components/home/home';
-import {PublicLayout} from './layouts/public-layout/public-layout';
-import {AdminLayout} from './layouts/admin-layout/admin-layout';
+import {PublicLayout} from './appCommon/components/layouts/public-layout/public-layout';
+import {AdminLayout} from './appCommon/components/layouts/admin-layout/admin-layout';
 import {AdminDashboard} from './components/admin-mangment/admin-dashboard/admin-dashboard';
 import { SignIn } from './components/auth/sign-in/sign-in';
 import { SignUp } from './components/auth/sign-up/sign-up';
 import {
   StudentEnrollmentDetail
-} from './components/admin-mangment/admin-dashboard/student-enrollment-detail/student-enrollment-detail';
+} from './student-encrollment/student-enrollment-detail/student-enrollment-detail';
+import {Home} from './appCommon/components/home/home';
 
 // export const routes: Routes = [
 //     { path: '', component: Home},
@@ -46,17 +46,17 @@ export const routes: Routes = [
   },
       {
         path: 'profile',
-        loadComponent: () => import('./shared/user-profile/user-profile').then(m => m.UserProfile),
+        loadComponent: () => import('./appCommon/components/user-profile/user-profile').then(m => m.UserProfile),
         data: {breadcrumb: 'Profile'},
       },
       {
         path: 'student-enrollment-requests',
-        loadComponent: () => import('./components/admin-mangment/admin-dashboard/student-enrollment-requests/student-enrollment-requests').then(m => m.StudentEnrollmentRequests),
+        loadComponent: () => import('./student-encrollment/student-enrollment-requests/student-enrollment-requests').then(m => m.StudentEnrollmentRequests),
         data: { breadcrump: 'Student encrollment request'}
       },
       {
         path: 'student-enrollment-detail',
-        loadComponent: () => import('./components/admin-mangment/admin-dashboard/student-enrollment-detail/student-enrollment-detail').then(m => m.StudentEnrollmentDetail),
+        loadComponent: () => import('./student-encrollment/student-enrollment-detail/student-enrollment-detail').then(m => m.StudentEnrollmentDetail),
         data: { breadcrump: 'Student encrollment details'}
       }
 

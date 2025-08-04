@@ -3,11 +3,13 @@ import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { AvatarModule } from 'primeng/avatar';
 import { DividerModule } from 'primeng/divider';
+import { TranslateModule } from '@ngx-translate/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-student-enrollment-detail',
   standalone: true,
-  imports: [CardModule, ButtonModule, AvatarModule, DividerModule],
+  imports: [CardModule, ButtonModule, AvatarModule, DividerModule, TranslateModule, CommonModule],
   templateUrl: './student-enrollment-detail.html',
   styleUrl: './student-enrollment-detail.css'
 })

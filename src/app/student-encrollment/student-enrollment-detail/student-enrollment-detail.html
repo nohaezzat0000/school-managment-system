@@ -1,0 +1,134 @@
+<div class="grid p-3 student-details">
+  <div class="col-12">
+    <h2 class="section-title">{{ 'STUDENT_ENROLLMENT_DETAILS' | translate }}</h2>
+  </div>
+
+  <!-- Personal Info -->
+  <div class="col-12">
+    <p-card class="profile-card mb-4">
+      <div class="profile-header">
+        <h4 class="m-0">{{ 'PERSONAL_INFORMATION' | translate }}</h4>
+      </div>
+      <p-divider></p-divider>
+      <div class="profile-fields">
+        <div class="field-row"><label>{{ 'FULL_NAME_AR' | translate }}</label><span>{{ student.personalInfo.fullNameArabic }}</span></div>
+        <div class="field-row"><label>{{ 'FULL_NAME_EN' | translate }}</label><span>{{ student.personalInfo.fullNameEnglish }}</span></div>
+        <div class="field-row"><label>{{ 'NATIONAL_ID' | translate }}</label><span>{{ student.personalInfo.nationalId }}</span></div>
+        <div class="field-row"><label>{{ 'BIRTH_DATE' | translate }}</label><span>{{ student.personalInfo.birthDate }}</span></div>
+        <div class="field-row"><label>{{ 'GENDER' | translate }}</label><span>{{ student.personalInfo.gender }}</span></div>
+        <div class="field-row"><label>{{ 'NATIONALITY' | translate }}</label><span>{{ student.personalInfo.nationality }}</span></div>
+        <div class="field-row"><label>{{ 'RELIGION' | translate }}</label><span>{{ student.personalInfo.religion }}</span></div>
+        <div class="field-row"><label>{{ 'BIRTH_PLACE' | translate }}</label><span>{{ student.personalInfo.birthPlace }}</span></div>
+        <div class="field-row" *ngIf="student.personalInfo.passportNumber"><label>{{ 'PASSPORT_NUMBER' | translate }}</label><span>{{ student.personalInfo.passportNumber }}</span></div>
+      </div>
+    </p-card>
+  </div>
+
+  <!-- Contact Info -->
+  <div class="col-12">
+    <p-card class="profile-card mb-4">
+      <div class="profile-header">
+        <h4 class="m-0">{{ 'CONTACT_AND_ADDRESS' | translate }}</h4>
+      </div>
+      <p-divider></p-divider>
+      <div class="profile-fields">
+        <div class="field-row"><label>{{ 'MOBILE_NUMBER' | translate }}</label><span>{{ student.contactInfo.mobileNumber }}</span></div>
+        <div class="field-row"><label>{{ 'EMAIL' | translate }}</label><span>{{ student.contactInfo.email }}</span></div>
+        <div class="field-row"><label>{{ 'GOVERNORATE' | translate }}</label><span>{{ student.contactInfo.address.governorate }}</span></div>
+        <div class="field-row"><label>{{ 'DISTRICT' | translate }}</label><span>{{ student.contactInfo.address.district }}</span></div>
+        <div class="field-row"><label>{{ 'STREET' | translate }}</label><span>{{ student.contactInfo.address.street }}</span></div>
+        <div class="field-row"><label>{{ 'BUILDING_NUMBER' | translate }}</label><span>{{ student.contactInfo.address.buildingNumber }}</span></div>
+        <div class="field-row" *ngIf="student.contactInfo.nearestTransport"><label>{{ 'NEAREST_TRANSPORT' | translate }}</label><span>{{ student.contactInfo.nearestTransport }}</span></div>
+      </div>
+    </p-card>
+  </div>
+
+  <!-- Guardian Info -->
+  <div class="col-12">
+    <p-card class="profile-card mb-4">
+      <div class="profile-header">
+        <h4 class="m-0">{{ 'GUARDIAN_INFORMATION' | translate }}</h4>
+      </div>
+      <p-divider></p-divider>
+      <div class="profile-fields">
+        <div class="field-row"><label>{{ 'FULL_NAME' | translate }}</label><span>{{ student.guardianInfo.fullName }}</span></div>
+        <div class="field-row"><label>{{ 'RELATIONSHIP' | translate }}</label><span>{{ student.guardianInfo.relationship }}</span></div>
+        <div class="field-row"><label>{{ 'NATIONAL_ID' | translate }}</label><span>{{ student.guardianInfo.nationalId }}</span></div>
+        <div class="field-row"><label>{{ 'MOBILE_NUMBER' | translate }}</label><span>{{ student.guardianInfo.mobileNumber }}</span></div>
+        <div class="field-row"><label>{{ 'EMAIL' | translate }}</label><span>{{ student.guardianInfo.email }}</span></div>
+        <div class="field-row" *ngIf="student.guardianInfo.occupation"><label>{{ 'OCCUPATION' | translate }}</label><span>{{ student.guardianInfo.occupation }}</span></div>
+        <div class="field-row" *ngIf="student.guardianInfo.workplace"><label>{{ 'WORKPLACE' | translate }}</label><span>{{ student.guardianInfo.workplace }}</span></div>
+      </div>
+    </p-card>
+  </div>
+
+  <!-- Academic Info -->
+  <div class="col-12">
+    <p-card class="profile-card mb-4">
+      <div class="profile-header">
+        <h4 class="m-0">{{ 'ACADEMIC_BACKGROUND' | translate }}</h4>
+      </div>
+      <p-divider></p-divider>
+      <div class="profile-fields">
+        <div class="field-row"><label>{{ 'LAST_CERTIFICATE' | translate }}</label><span>{{ student.academicInfo.lastCertificate }}</span></div>
+        <div class="field-row"><label>{{ 'PREVIOUS_SCHOOL' | translate }}</label><span>{{ student.academicInfo.previousSchool }}</span></div>
+        <div class="field-row"><label>{{ 'GRADUATION_YEAR' | translate }}</label><span>{{ student.academicInfo.graduationYear }}</span></div>
+        <div class="field-row"><label>{{ 'TOTAL_SCORE' | translate }}</label><span>{{ student.academicInfo.totalScore }}</span></div>
+        <div class="field-row"><label>{{ 'GENERAL_GRADE' | translate }}</label><span>{{ student.academicInfo.generalGrade }}</span></div>
+      </div>
+    </p-card>
+  </div>
+
+  <!-- Documents -->
+  <div class="col-12">
+    <p-card class="profile-card mb-4">
+      <div class="profile-header">
+        <h4 class="m-0">{{ 'UPLOADED_DOCUMENTS' | translate }}</h4>
+      </div>
+      <p-divider></p-divider>
+      <div class="grid">
+        <div class="col-12 md:col-4" *ngIf="student.documents.profilePhoto">
+          <p><strong>{{ 'PROFILE_PHOTO' | translate }}</strong></p>
+          <img [src]="student.documents.profilePhoto" alt="Profile" width="100" class="mb-2" />
+        </div>
+        <div class="col-12 md:col-4" *ngIf="student.documents.certificateImage">
+          <p><strong>{{ 'CERTIFICATE_IMAGE' | translate }}</strong></p>
+          <img [src]="student.documents.certificateImage" alt="Certificate" width="100" class="mb-2" />
+        </div>
+        <div class="col-12 md:col-4" *ngIf="student.documents.nationalIdOrBirthCert">
+          <p><strong>{{ 'NATIONAL_ID_BIRTH_CERT' | translate }}</strong></p>
+          <img [src]="student.documents.nationalIdOrBirthCert" alt="ID/Birth Cert" width="100" class="mb-2" />
+        </div>
+        <div class="col-12 md:col-4" *ngIf="student.documents.guardianIdImage">
+          <p><strong>{{ 'GUARDIAN_ID' | translate }}</strong></p>
+          <img [src]="student.documents.guardianIdImage" alt="Guardian ID" width="100" class="mb-2" />
+        </div>
+        <div class="col-12" *ngIf="student.documents.achievementCertificates?.length">
+          <p><strong>{{ 'ACHIEVEMENT_CERTIFICATES' | translate }}</strong></p>
+          <div class="flex flex-wrap gap-2">
+            <img *ngFor="let cert of student.documents.achievementCertificates" [src]="cert" alt="Achievement" width="100" />
+          </div>
+        </div>
+      </div>
+    </p-card>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="form-actions">
+    <button
+      pButton
+      [label]="'ACCEPT' | translate"
+      icon="pi pi-check"
+      class="p-button-success mr-2"
+      (click)="onAccept()"
+    ></button>
+
+    <button
+      pButton
+      [label]="'REJECT' | translate"
+      icon="pi pi-times"
+      class="p-button-danger"
+      (click)="onReject()"
+    ></button>
+  </div>
+</div>
