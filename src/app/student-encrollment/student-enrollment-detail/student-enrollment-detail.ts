@@ -31,13 +31,60 @@ export class StudentEnrollmentDetail implements OnInit{
   loadStudent(): void {
     this.enrollmentService.getEnrollmentRequestById(this.id).subscribe({
       next: (data) => {
-        this.student = data;
+        this.student = {
+          personalInfo: {
+            fullNameArabic: data.fullNameAr,
+            fullNameEnglish: data.fullNameEn,
+            nationalId: data.nationalId,
+            birthDate: data.birthDate,
+            gender: data.gender,
+            nationality: data.nationality,
+            religion: data.religion,
+            birthPlace: data.placeOfBirth,
+            passportNumber: data.passportNumber
+          },
+          contactInfo: {
+            mobileNumber: data.phone,
+            email: data.email,
+            address: {
+              governorate: '', // Not available unless you have extra fields
+              district: '',
+              street: '',
+              buildingNumber: ''
+            },
+            nearestTransport: ''
+          },
+          guardianInfo: {
+            fullName: data.guardianName,
+            relationship: data.guardianRelation,
+            nationalId: data.guardianNationalId,
+            mobileNumber: data.guardianPhone,
+            email: data.guardianEmail,
+            occupation: '', // optional
+            workplace: ''   // optional
+          },
+          academicInfo: {
+            lastCertificate: data.certificateType,
+            previousSchool: data.previousSchool,
+            graduationYear: data.graduationYear,
+            totalScore: data.totalGrade,
+            generalGrade: data.generalGrade
+          },
+          documents: {
+            profilePhoto: data.personalPhotoUrl,
+            certificateImage: data.certificateUrl,
+            nationalIdOrBirthCert: data.birthCertificateUrl,
+            guardianIdImage: data.guardianIdUrl,
+            achievementCertificates: data.extraCertificatesUrl ? [data.extraCertificatesUrl] : []
+          }
+        };
       },
       error: (err) => {
         console.error('Error fetching student details:', err);
       }
     });
   }
+
 
   onAccept(): void {
     this.enrollmentService.acceptEnrollmentRequest(this.id).subscribe({
