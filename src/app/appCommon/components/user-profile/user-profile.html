@@ -1,6 +1,5 @@
-<p-card class="profile-card mt-8" *ngIf="user"> <!-- تأكد إن بيانات اليوزر وصلت -->
+<p-card class="profile-card mt-8" *ngIf="user">
   <div class="profile-header d-flex justify-content-between align-items-center">
-
     <div class="header-left d-flex align-items-center">
       <p-avatar
         image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
@@ -20,25 +19,26 @@
       icon="pi pi-pencil"
       class="p-button-text p-button-rounded edit-button"
       (click)="onEdit()"
-      aria-label="Edit Profile"
+      [attr.aria-label]="'EDIT_PROFILE' | translate"
     ></button>
   </div>
 
   <p-divider align="left">
-    <span>User Information</span>
+    <span>{{ 'USER_INFORMATION' | translate }}</span>
   </p-divider>
 
   <div class="profile-fields">
     <div class="field-row">
-      <label>Phone:</label>
+      <label>{{ 'PHONE' | translate }}</label>
       <span>{{ user.phoneNumber }}</span>
     </div>
     <div class="field-row">
-      <label>Job Title:</label>
+      <label>{{ 'JOB_TITLE' | translate }}</label>
       <span>{{ user.role }}</span>
     </div>
   </div>
 </p-card>
+
 
 
 

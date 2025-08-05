@@ -54,7 +54,6 @@
 
   "FORGOT_PASSWORD": "نسيت كلمة المرور",
   "ACTIVATE_ACCOUNT":"تفعيل الحساب",
-
   "SUCCESS": "نجحت العملية",
   "ERROR": "خطأ",
   "WARNING": "تحذير",
@@ -65,6 +64,34 @@
   "PLEASE_COMPLETE_FORM": "يرجى إكمال جميع الحقول المطلوبة بشكل صحيح.",
   "SIGNING_UP": "جاري إنشاء الحساب...",
 
+  "USER_INFORMATION": "معلومات المستخدم",
+  "PHONE": "رقم الهاتف",
+  "JOB_TITLE": "المسمى الوظيفي",
+  "EDIT_PROFILE": "تعديل الملف الشخصي",
+
+  "DASHBOARD": {
+    "USERS": "المستخدمين",
+    "CLASSES": "الفصول",
+    "TEACHERS": "المعلمين",
+    "MANAGEMENTS": "الإدارات",
+    "USER_GROWTH": "نمو المستخدمين",
+    "ORDERS_BY_CATEGORY": "الطلبات حسب الفئة",
+    "LATEST_ORDERS": "أحدث الطلبات",
+    "USER_ID": "معرّف المستخدم",
+    "JOB": "الوظيفة",
+    "CLASS": "الفصل",
+    "STATUS": "الحالة"
+  },
+  "STUDENT_ENROLLMENT_REQUESTS": "طلبات تسجيل الطلاب",
+  "USER_ID": "معرّف المستخدم",
+  "STUDENT_NAME": "اسم الطالب",
+  "STUDENT_CODE": "رمز الطالب",
+  "PREVIOUS_CERTIFICATE": "الشهادة السابقة",
+  "TOTAL_GRADE": "المجموع الكلي",
+  "PATH": "المسار",
+  "REGISTRATION_DATE": "تاريخ التسجيل",
+  "ACTIONS": "الإجراءات",
+  "VIEW_DETAILS": "عرض التفاصيل",
 
   "STUDENT_ENROLLMENT_DETAILS": "تفاصيل تسجيل الطالب",
   "PERSONAL_INFORMATION": "المعلومات الشخصية",

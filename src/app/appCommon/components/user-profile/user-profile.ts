@@ -8,12 +8,13 @@ import { AvatarModule } from 'primeng/avatar';
 import { PanelModule } from 'primeng/panel';
 import { DividerModule } from 'primeng/divider';
 import { UserService } from '../../service/userService/user';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-user-profile',
   standalone: true,
   imports: [FormsModule, ButtonModule, CardModule, CommonModule,
-    InputTextModule, AvatarModule, PanelModule, DividerModule],
+    InputTextModule, AvatarModule, PanelModule, DividerModule, TranslateModule],
   templateUrl: './user-profile.html',
   styleUrl: './user-profile.css'
 })

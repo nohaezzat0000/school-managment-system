@@ -65,6 +65,15 @@ export class SignIn {
           this.isLoading = false;
           this.signInForm.enable();
 
+          //sava user name
+          // ✅ Save the token
+          localStorage.setItem('token', response.accessToken);
+
+          // ✅ Decode and save user name from token
+          const payload = JSON.parse(atob(response.accessToken.split('.')[1]));
+          localStorage.setItem('firstName', payload.firstName);
+          localStorage.setItem('lastName', payload.lastName);
+
           this.messageService.add({
             severity: 'success',
             summary: this.translateService.instant('SUCCESS'),

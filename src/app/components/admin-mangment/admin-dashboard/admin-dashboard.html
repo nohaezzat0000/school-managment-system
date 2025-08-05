@@ -1,39 +1,39 @@
 <div class="p-4">
   <!-- Stats Cards -->
   <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
-    <p-card header="Users" styleClass="text-center shadow-md">
+    <p-card [header]="'DASHBOARD.USERS' | translate" styleClass="text-center shadow-md">
       <div class="text-2xl font-bold text-blue-600">3500</div>
     </p-card>
-    <p-card header="classes" styleClass="text-center shadow-md">
+    <p-card [header]="'DASHBOARD.CLASSES' | translate" styleClass="text-center shadow-md">
       <div class="text-2xl font-bold text-green-600">340</div>
     </p-card>
-    <p-card header="teaches" styleClass="text-center shadow-md">
+    <p-card [header]="'DASHBOARD.TEACHERS' | translate" styleClass="text-center shadow-md">
       <div class="text-2xl font-bold text-purple-600">1398</div>
     </p-card>
-    <p-card header="managments" styleClass="text-center shadow-md">
+    <p-card [header]="'DASHBOARD.MANAGEMENTS' | translate" styleClass="text-center shadow-md">
       <div class="text-2xl font-bold text-orange-600">1249</div>
     </p-card>
   </div>
 
   <!-- Chart Section -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-    <p-card header="User Growth">
+    <p-card [header]="'DASHBOARD.USER_GROWTH' | translate">
       <p-chart type="bar" [data]="barChartData"></p-chart>
     </p-card>
-    <p-card header="Orders by Category">
+    <p-card [header]="'DASHBOARD.ORDERS_BY_CATEGORY' | translate">
       <p-chart type="pie" [data]="pieChartData"></p-chart>
     </p-card>
   </div>
 
   <!-- Table Section -->
-  <p-card header="Latest Orders">
+  <p-card [header]="'DASHBOARD.LATEST_ORDERS' | translate">
     <p-table [value]="orders" [paginator]="true" [rows]="5">
       <ng-template pTemplate="header">
         <tr>
-          <th>user ID</th>
-          <th>job</th>
-          <th>class</th>
-          <th>Status</th>
+          <th>{{ 'DASHBOARD.USER_ID' | translate }}</th>
+          <th>{{ 'DASHBOARD.JOB' | translate }}</th>
+          <th>{{ 'DASHBOARD.CLASS' | translate }}</th>
+          <th>{{ 'DASHBOARD.STATUS' | translate }}</th>
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-order>
@@ -47,3 +47,4 @@
     </p-table>
   </p-card>
 </div>
+>

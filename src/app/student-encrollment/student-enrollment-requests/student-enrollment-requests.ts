@@ -3,6 +3,8 @@ import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { Router } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+import { TooltipModule } from 'primeng/tooltip';
 
 interface StudentEnrollmentRequest {
   userId: number;
@@ -14,11 +16,10 @@ interface StudentEnrollmentRequest {
   registrationDate: string;
 }
 
-
 @Component({
   selector: 'app-student-enrollment-requests',
   standalone: true,
-  imports: [TableModule, CommonModule, ButtonModule],
+  imports: [TableModule, CommonModule, ButtonModule, TranslateModule, TooltipModule],
   templateUrl: './student-enrollment-requests.html',
   styleUrl: './student-enrollment-requests.css'
 })

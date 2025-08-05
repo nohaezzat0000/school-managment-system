@@ -1,49 +1,49 @@
- <h2 class="mt-2 text-xl font-bold mb-4">Student Enrollment Requests</h2>
+<h2 class="mt-2 text-xl font-bold mb-4">{{ 'STUDENT_ENROLLMENT_REQUESTS' | translate }}</h2>
 
-  <p-table
-    [value]="Students"
-    [paginator]="true"
-    [rows]="5"
-    [tableStyle]="{ 'min-width': '70rem' }"
-    [rowsPerPageOptions]="[5, 10, 20]"
-    class="p-datatable-sm"
-  >
-    <ng-template pTemplate="header">
-      <tr>
-        <th class="text-sm text-gray-700">User ID</th>
-        <th class="text-sm text-gray-700">Student Name</th>
-        <th class="text-sm text-gray-700">Student Code</th>
-        <th class="text-sm text-gray-700">Previous Certificate</th>
-        <th class="text-sm text-gray-700">Total Grade</th>
-        <th class="text-sm text-gray-700">Path</th>
-        <th class="text-sm text-gray-700">Registration Date</th>
-        <th class="text-sm text-gray-700 text-center">Actions</th>
-      </tr>
-    </ng-template>
+<p-table
+  [value]="Students"
+  [paginator]="true"
+  [rows]="5"
+  [tableStyle]="{ 'min-width': '70rem' }"
+  [rowsPerPageOptions]="[5, 10, 20]"
+  class="p-datatable-sm"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th class="text-sm text-gray-700">{{ 'USER_ID' | translate }}</th>
+      <th class="text-sm text-gray-700">{{ 'STUDENT_NAME' | translate }}</th>
+      <th class="text-sm text-gray-700">{{ 'STUDENT_CODE' | translate }}</th>
+      <th class="text-sm text-gray-700">{{ 'PREVIOUS_CERTIFICATE' | translate }}</th>
+      <th class="text-sm text-gray-700">{{ 'TOTAL_GRADE' | translate }}</th>
+      <th class="text-sm text-gray-700">{{ 'PATH' | translate }}</th>
+      <th class="text-sm text-gray-700">{{ 'REGISTRATION_DATE' | translate }}</th>
+      <th class="text-sm text-gray-700 text-center">{{ 'ACTIONS' | translate }}</th>
+    </tr>
+  </ng-template>
 
-    <ng-template pTemplate="body" let-student>
-      <tr>
-        <td>{{ student.userId }}</td>
-        <td>{{ student.studentName }}</td>
-        <td>{{ student.studentCode }}</td>
-        <td>{{ student.previousCertificate }}</td>
-        <td>{{ student.totalGrade }}</td>
-        <td>{{ student.path }}</td>
-        <td>{{ student.registrationDate }}</td>
-        <td class="flex justify-content-center">
-          <button
-            pButton
-            icon="pi pi-eye"
-            class="p-button-sm p-button-text text-primary"
-            tooltip="View Details"
-            tooltipPosition="top"
-            (click)="viewDetails(student)"
-          ></button>
-        </td>
+  <ng-template pTemplate="body" let-student>
+    <tr>
+      <td>{{ student.userId }}</td>
+      <td>{{ student.studentName }}</td>
+      <td>{{ student.studentCode }}</td>
+      <td>{{ student.previousCertificate }}</td>
+      <td>{{ student.totalGrade }}</td>
+      <td>{{ student.path }}</td>
+      <td>{{ student.registrationDate }}</td>
+      <td class="flex justify-content-center">
+        <button
+          pButton
+          icon="pi pi-eye"
+          class="p-button-sm p-button-text text-primary"
+          [pTooltip]="'VIEW_DETAILS' | translate"
+          tooltipPosition="top"
+          (click)="viewDetails(student)"
+        ></button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
 
-      </tr>
-    </ng-template>
-  </p-table>
 
 
 

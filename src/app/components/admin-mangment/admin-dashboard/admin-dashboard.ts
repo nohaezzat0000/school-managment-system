@@ -7,11 +7,11 @@ import {RouterOutlet} from '@angular/router';
 import {Card} from 'primeng/card';
 import {TableModule} from 'primeng/table';
 import {UIChart} from 'primeng/chart';
-
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-admin-dashboard',
-  imports: [PanelMenuModule, ButtonModule, Card, TableModule, UIChart],
+  imports: [PanelMenuModule, ButtonModule, Card, TableModule, UIChart, TranslateModule],
   standalone:true,
   templateUrl: './admin-dashboard.html',
   styleUrl: './admin-dashboard.css'
