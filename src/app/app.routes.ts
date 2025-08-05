@@ -52,12 +52,12 @@ export const routes: Routes = [
       {
         path: 'student-enrollment-requests',
         loadComponent: () => import('./student-encrollment/student-enrollment-requests/student-enrollment-requests').then(m => m.StudentEnrollmentRequests),
-        data: { breadcrump: 'Student encrollment request'}
+        data: { breadcrumb: 'Student encrollment requests'}
       },
       {
-        path: 'student-enrollment-detail',
+        path: 'student-enrollment-detail/:id',
         loadComponent: () => import('./student-encrollment/student-enrollment-detail/student-enrollment-detail').then(m => m.StudentEnrollmentDetail),
-        data: { breadcrump: 'Student encrollment details'}
+        data: { breadcrumb: 'Student encrollment details'}
       }
 
 
