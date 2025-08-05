@@ -1,0 +1,29 @@
+<div class="row">
+<div class="col-sm-4 mb-3">
+  <div class="det-info"
+    *ngIf="attachmentObject.attachmentName">
+    <div class="file-holder">
+      <span class="d-flex align-items-center">
+        <i
+          class="pi pi-file text-400 fs-5"></i>
+
+        <span> {{ attachmentObject.attachmentName }} </span>
+      </span>
+      <div>
+      <i class="pi pi-download link-primary fs-5 mx-2" (click)="downloadAttachment(attachmentObject)"></i>
+      <i class="pi pi-eye link-primary fs-5" (click)="previewAttachment(attachmentObject)"></i>
+      </div>
+    </div>
+
+    <p *ngIf="false" class="hint mt-3">
+      {{ 'registrationRequest.add.size' | translate }}
+      <!-- bind size here -->
+    </p>
+  </div>
+</div>
+</div>
+
+<div *ngIf="showAttachment" class="row">
+  <app-attachment-preview [attachment]="attachmentObject"
+                          (showAttachment)="showAttachment = $event"></app-attachment-preview>
+</div>

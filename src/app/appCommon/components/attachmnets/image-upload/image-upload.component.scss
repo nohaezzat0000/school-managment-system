@@ -1,0 +1,215 @@
+.file-upload {
+  border: none;
+  position: relative;
+  // padding: 19px 19px;
+  width: 91px;
+  min-height: 49px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 0.25rem;
+  height: auto !important;
+
+  &.enabled {
+    border: none;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23F0F0F1FF' stroke-width='2' stroke-dasharray='12' stroke-dashoffset='14' stroke-linecap='square'/%3e%3c/svg%3e");
+  }
+
+  &.fileFound {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8px 0;
+    border: 0;
+    background: none;
+    border-bottom: 1px solid #f0f0f1 !important;
+    border-radius: 0 !important;
+    .upload-info-container {
+      margin: 0;
+      .file-name {
+        margin-inline-start: 4px;
+        max-width: 50%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .file-uploaded-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .file-name-icon {
+          display: flex;
+          align-items: center;
+          flex-basis: 75%;
+        }
+        .delete-uploaded-file {
+          flex-basis: 25%;
+          text-align: end;
+          display: flex;
+          justify-content: flex-end;
+          position: relative;
+          z-index: 9999;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &.disabledUpload {
+    padding: 0;
+    border-radius: 8px;
+    border: 1px solid #f0f0f1;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+
+    .file-info__wrapper {
+      margin-inline-end: 28px;
+    }
+
+    .file-icon {
+      position: absolute;
+      inset-inline-start: 7px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .file-details__wrapper {
+      padding-inline-start: 32px;
+    }
+
+    .file-name {
+      margin-inline: 0;
+      cursor: pointer;
+      text-align: justify;
+    }
+
+    span {
+      margin-inline: 0;
+    }
+
+    .file-meta__wrapper {
+      display: flex;
+      align-items: center;
+      column-gap: 4px;
+      color: #484d51;
+      font-size: 11px;
+
+      .divider {
+        color: #f0f0f1;
+      }
+    }
+  }
+
+  .image-icon {
+    margin-inline: 0;
+    cursor: auto;
+  }
+
+  .file-name {
+    color: #23282d;
+    font-size: 13px;
+    margin-inline-start: 20px;
+    cursor: auto;
+  }
+
+  input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  .p-button {
+    background: unset !important;
+    border: 0 !important;
+    outline: 0 !important;
+    color: #333 !important;
+    font-weight: normal !important;
+    padding: 2px 0;
+  }
+
+  .upload-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+
+    span.upload-instructions {
+      span.text-primary {
+        color: #b49164 !important;
+        margin: 0;
+        font-weight: 500 !important;
+        text-decoration: underline;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.pi-upload {
+  padding-top: 0.8rem;
+  height: 42px;
+  z-index: 0;
+}
+
+.download-preview-icon {
+  display: flex;
+  position: absolute;
+  inset-inline-end: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.downloadable-file-name {
+  margin-bottom: 0;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.error1 {
+  color: #ef0808;
+  font-weight: bold;
+  border: red 1px solid;
+}
+
+.error2 {
+  color: #ef0808;
+  font-weight: bold;
+}
+
+.default-color {
+  color: #495057;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.125rem;
+}
+
+.mat-hint {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 0.5rem;
+}
+
+
+.uploaded-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1B8354;
+}

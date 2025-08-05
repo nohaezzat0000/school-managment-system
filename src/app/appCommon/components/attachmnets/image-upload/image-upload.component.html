@@ -1,0 +1,72 @@
+<ng-container>
+  <span
+    *ngIf="inputFormControl?.hasValidator(Validators.required)"
+    [ngClass]="{
+      error2: inputFormControl?.touched && inputFormControl?.errors?.required,
+      'default-color': !inputFormControl?.errors
+    }"
+  >
+    *
+  </span>
+
+  <div
+    class="form-control file-upload"
+    [ngClass]="{
+      enabled: !disableUpload,
+      disabledUpload: disableUpload && !downloadableFileName,
+      'p-0 mt-0': disableUpload && downloadableFileName
+    }"
+  >
+    <div *ngIf="disableUpload && !downloadableFileName" class="p-2 position-relative">
+      <div *ngIf="showPreviewFile" class="download-preview-icon">
+        <i
+          class="pi pi-eye link-primary fs-5"
+          (click)="previewAttachment(attachmentObject, $event)"
+        ></i>
+      </div>
+    </div>
+
+    <div class="upload-info-container">
+      <input
+         #fileInput
+        type="file"
+        [accept]="acceptedFileTypes"
+        *ngIf="!disableUpload && inputFormControl"
+        (change)="onAttachmentUpload($event)"
+        name="attachment"
+      />
+      <ng-container *ngIf="!base64Image?.length; else uploadedImage">
+        <div>
+          <svg class="d-block mx-auto"  width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.6276 15.7395L16.628 15.739C16.7262 15.6377 16.7237 15.476 16.6225 15.3778C16.5212 15.2795 16.3595 15.2819 16.2612 15.3831C16.1629 15.4843 16.1652 15.646 16.2663 15.7444C16.3674 15.8428 16.5292 15.8406 16.6276 15.7395" stroke="#B49164" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 17.7336C4.42901 17.6676 4.86225 17.6329 5.29629 17.6299V17.6299C7.70289 17.6299 10.0109 18.5859 11.7126 20.2876C13.4144 21.9893 14.3704 24.2974 14.3704 26.704C14.3664 27.138 14.3317 27.5711 14.2667 28.0003" stroke="#B49164" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="4" y="9.33301" width="18.6667" height="18.6667" rx="3" stroke="#B49164" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 9.33333V8C8 5.79086 9.79086 4 12 4H24C26.2091 4 28 5.79086 28 8V20C28 22.2091 26.2091 24 24 24H22.6667" stroke="#B49164" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="label text-center text-primary d-block mx-auto" *ngIf="label">{{ label }}</span>
+        </div>
+      </ng-container>
+      <ng-template #uploadedImage>
+        <img [src]="base64Image" class="uploaded-image" alt="uploaded image" />
+      </ng-template>
+    </div>
+  </div>
+  <div *ngIf="inputFormControl && invalidFileType" class="error">
+    {{ "allowedAttachmentTypes" | translate }}{{ allowedFileTypes + ")" }}
+  </div>
+
+  <div *ngIf="!disableUpload" class="mat-hint">
+    {{
+      hint
+        ? (hint | translate)
+        : translatedHint ?? ("allowedAttachmentTypes" | translate) + allowedFileTypes + ")"
+    }}<span>&nbsp;</span>
+  </div>
+
+  <div *ngIf="inputFormControl?.touched && inputFormControl?.errors?.required" class="error">
+    {{ "requiredErrorMessage" | translate }}
+  </div>
+  <div *ngIf="inputFormControl && invalidFileSize" class="error">
+    {{ "invalidFile" | translate }} {{ (maxFileSize / 1000) + " " }} {{ "MOH.UMR-LICENSE.Kbyte" | translate }}
+  </div>
+</ng-container>

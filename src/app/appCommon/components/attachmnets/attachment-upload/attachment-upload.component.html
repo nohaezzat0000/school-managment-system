@@ -1,0 +1,237 @@
+<ng-container>
+  <label *ngIf="label" [style.font-weight]="fontWeight"
+    >{{ label | translate }}
+  </label>
+  <span
+    *ngIf="
+      inputFormControl && inputFormControl.hasValidator(Validators.required)
+    "
+    [ngClass]="{
+      error2:
+        inputFormControl &&
+        inputFormControl.touched &&
+        inputFormControl.errors &&
+        inputFormControl.errors.required,
+      'default-color': !inputFormControl.errors
+    }"
+  >
+    *
+  </span>
+  <!-- file name only with download action -->
+  <p
+    *ngIf="disableUpload && downloadableFileName"
+    (click)="downloadAttachment(attachmentObject, $event)"
+    class="downloadable-file-name"
+  >
+    {{
+      attachmentObject && attachmentObject.id && attachmentObject.fileName
+        ? attachmentObject.fileName
+        : ""
+    }}
+  </p>
+  <!-- <div style="display:flex"> -->
+  <div
+    class="form-control file-upload"
+    [ngClass]="{
+      enabled: !disableUpload,
+      disabledUpload: disableUpload && !downloadableFileName,
+      'p-0 mt-0': disableUpload && downloadableFileName
+    }"
+  >
+    <div
+      *ngIf="disableUpload && !downloadableFileName"
+      class="p-2 position-relative"
+    >
+      <div
+        (click)="downloadAttachment(attachmentObject, $event)"
+        class="file-info__wrapper"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="25"
+          viewBox="0 0 24 25"
+          fill="none"
+          class="file-icon"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M18.414 6.914L15.586 4.086C15.211 3.711 14.702 3.5 14.172 3.5H7C5.895 3.5 5 4.395 5 5.5V19.5C5 20.605 5.895 21.5 7 21.5H17C18.105 21.5 19 20.605 19 19.5V8.328C19 7.798 18.789 7.289 18.414 6.914V6.914Z"
+            stroke="#7E8387"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M19 8.5H15C14.448 8.5 14 8.052 14 7.5V3.5"
+            stroke="#7E8387"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M8 11.5H14"
+            stroke="#7E8387"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M8 14.5H14"
+            stroke="#7E8387"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M8 17.5H12.33"
+            stroke="#7E8387"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <div class="file-details__wrapper">
+          <p class="file-name text-truncate mb-0">
+            {{
+              attachmentObject &&
+              attachmentObject.id &&
+              attachmentObject.fileName
+                ? attachmentObject.fileName
+                : ""
+            }}
+          </p>
+          <div class="file-meta__wrapper">
+            <!-- get file extension -->
+            <span class="uppercase number_font">
+              {{
+                attachmentObject &&
+                attachmentObject.id &&
+                attachmentObject.fileName
+                  ? attachmentObject.fileName.substring(
+                      attachmentObject.fileName.lastIndexOf(".") + 1,
+                      attachmentObject.fileName.length
+                    )
+                  : ""
+              }}
+            </span>
+            <span class="divider">|</span>
+            <!-- convert file size to KB -->
+            <span class="number_font" dir="ltr"
+              >{{
+                attachmentObject && attachmentObject.fileSize
+                  ? (attachmentObject.fileSize / 1024).toFixed(1)
+                  : "---"
+              }}
+              KB</span
+            >
+          </div>
+        </div>
+      </div>
+      <div *ngIf="showPreviewFile" class="download-preview-icon">
+        <i
+          class="pi pi-eye link-primary fs-5"
+          (click)="previewAttachment(attachmentObject, $event)"
+        ></i>
+      </div>
+    </div>
+
+    <div class="upload-info-container">
+      <input
+        type="file"
+        [accept]="acceptedFileTypes"
+        *ngIf="!disableUpload && inputFormControl"
+        (change)="onAttachmentUpload($event)"
+        class=""
+        name="attachment"
+      />
+      <!--      <i *ngIf="!disableUpload" class="pi pi-upload link-primary fs-5 mx-2"></i>-->
+      <svg
+        *ngIf="!disableUpload"
+        width="37"
+        height="36"
+        viewBox="0 0 37 36"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0.5 18C0.5 8.05888 8.55888 0 18.5 0C28.4411 0 36.5 8.05888 36.5 18C36.5 27.9411 28.4411 36 18.5 36C8.55888 36 0.5 27.9411 0.5 18Z"
+          fill="#F7FDF9"
+        />
+        <path
+          d="M11 20.5H14.6517C14.9674 20.5 15.2561 20.6785 15.3972 20.961L15.7691 21.7057C15.9102 21.9882 16.1988 22.1667 16.5146 22.1667H20.4846C20.8002 22.1667 21.0888 21.9883 21.2299 21.706L21.6026 20.9607C21.7437 20.6783 22.0323 20.5 22.3479 20.5H26"
+          stroke="#1B8354"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M18.5002 14.2031V18.3698"
+          stroke="#1B8354"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M20.1668 15.8717L18.5002 14.2051L16.8335 15.8717"
+          stroke="#1B8354"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M23.5 10.5C24.8807 10.5 26 11.6193 26 13V23C26 24.3807 24.8807 25.5 23.5 25.5H13.5C12.1193 25.5 11 24.3807 11 23V13C11 11.6193 12.1193 10.5 13.5 10.5H23.5Z"
+          stroke="#1B8354"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <span
+        class="upload-instructions text-truncate w-auto"
+        *ngIf="!disableUpload && inputFormControl"
+      >
+        <span class="text-primary">{{
+          "MOH.GLOB-SETT.choose-attach" | translate
+        }}</span>
+        <span>{{ "MOH.GLOB-SETT.drop-file" | translate }}</span>
+      </span>
+    </div>
+
+    <div class="file-name text-truncate text-center m-0" *ngIf="!disableUpload">
+      {{
+        inputFormControl &&
+        inputFormControl.value &&
+        inputFormControl.value.name
+          ? inputFormControl.value.name
+          : inputFormControl &&
+            inputFormControl.value &&
+            inputFormControl.value.fileName &&
+            inputFormControl.value.id
+          ? inputFormControl.value.fileName
+          : attachmentObject && attachmentObject.id && attachmentObject.fileName
+          ? attachmentObject.fileName
+          : ""
+      }}
+    </div>
+  </div>
+  <!-- </div> -->
+  <div
+    *ngIf="
+      inputFormControl &&
+      inputFormControl.touched &&
+      inputFormControl.errors &&
+      inputFormControl.errors.required
+    "
+    class="error"
+  >
+    {{ "requiredErrorMessage" | translate }}
+  </div>
+  <div *ngIf="inputFormControl && invalidFileSize" class="error">
+    {{ "invalidFile" | translate }}{{ " " + maxFileSize / 1000 +" " }}{{ "MOH.UMR-LICENSE.Kbyte"| translate }}
+  </div>
+  <div *ngIf="inputFormControl && invalidFileType" class="error">
+    {{ "allowedAttachmentTypes" | translate }}{{ allowedFileTypes + ")" }}
+  </div>
+  <div *ngIf="!disableUpload" class="mat-hint">
+    {{
+      hint
+        ? (hint | translate)
+        : translatedHint ?? ("allowedAttachmentTypes" | translate) + allowedFileTypes + ")"
+    }}<span>&nbsp;</span>
+  </div>
+</ng-container>

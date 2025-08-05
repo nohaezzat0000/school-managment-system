@@ -1,0 +1,17 @@
+
+
+  <img *ngIf="isImage" [src]="attachmentUrl" alt="Attachment Preview" class="img-fluid" />
+
+  <div *ngIf="isTxt">
+    <pre>{{ textContent }}</pre>
+  </div>
+
+  <pdf-viewer  *ngIf="isPdf"
+               [src]="pdfSrc"
+               [render-text]="true"
+               [original-size]="true"
+               [fit-to-page]="true"
+               style="height: 50rem"
+
+  ></pdf-viewer>
+
