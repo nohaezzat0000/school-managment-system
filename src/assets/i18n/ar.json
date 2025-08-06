@@ -27,11 +27,9 @@
   "FIRST_NAME": "الإسم الأول",
   "LAST_NAME": "الإسم الأخير",
   "DATE_OF_BIRTH": "تاريخ الميلاد",
-  "EMAIL": "البريد الإلكتروني",
   "PHONE_NUMBER": "رقم الجوال",
   "PASSWORD": "كلمة المرور",
   "CONFIRM_PASSWORD": "تأكيد كلمة المرور",
-  "FULL_NAME": "الاسم الكامل",
 
   "ENTER_FIRST_NAME": "أدخل الإسم الأول",
   "ENTER_LAST_NAME": "أدخل الإسم الأخير",
